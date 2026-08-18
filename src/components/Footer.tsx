@@ -79,7 +79,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <img
                 src={logoImg}
                 alt="360 BizHealth"
-                className="h-[50px] w-auto object-contain"
+                className="h-[58px] w-auto object-contain"
               />
             </a>
             <p className="text-[14px] leading-relaxed text-slate-600 font-medium">

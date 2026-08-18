@@ -126,7 +126,7 @@ export default function Header({ onNavigate }: HeaderProps) {
                 src={logoImg}
                 alt="360 BizHealth"
                 className={`w-auto object-contain transition-all duration-300 ${
-                  isScrolled ? "h-[42px]" : "h-[50px]"
+                  isScrolled ? "h-[48px]" : "h-[58px]"
                 }`}
               />
             </a>
@@ -240,7 +240,7 @@ export default function Header({ onNavigate }: HeaderProps) {
             <img
               src={logoImg}
               alt="360 BizHealth"
-              className="h-[42px] w-auto object-contain"
+              className="h-[48px] w-auto object-contain"
             />
           </a>
 
@@ -275,7 +275,7 @@ export default function Header({ onNavigate }: HeaderProps) {
                 <img
                   src={logoImg}
                   alt="360 BizHealth"
-                  className="h-[42px] w-auto object-contain"
+                  className="h-[48px] w-auto object-contain"
                 />
               </div>
               <button

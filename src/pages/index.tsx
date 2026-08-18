@@ -6,7 +6,7 @@ import hrTechnology from "@/assets/hr-technology.jpg";
 import statutoryCompliance from "@/assets/statutory-compliance-2.jpg";
 import financialTaxation from "@/assets/tds-labour.jpg";
 import insuranceAdvisory from "@/assets/insurance-advisory.jpg";
-import heroDashboard from "@/assets/hero-dashboard.jpg";
+import heroIllustration from "@/assets/hero-illustration.jpg";
 import integrateImg from "@/assets/company-registration.jpg";
 import gaugeImg from "@/assets/ipr-brand.jpg";
 import envelopeImg from "@/assets/team-retreats.jpg";
@@ -103,14 +103,11 @@ function Hero() {
             {/* Soft glow behind the image */}
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-orange-500/10 rounded-3xl filter blur-2xl opacity-75 pointer-events-none scale-95"></div>
             
-            {/* Dashboard Mockup Card */}
-            <div className="relative overflow-hidden rounded-2xl glow-card ring-1 ring-black/5 bg-white transition-transform hover:scale-[1.01] duration-300 w-full">
-              <img 
-                src={heroDashboard} 
-                alt="360 Biz Health platform" 
-                className="w-full h-auto object-cover"
-              />
-            </div>
+            <img 
+              src={heroIllustration} 
+              alt="360 Biz Health platform" 
+              className="relative w-full h-auto object-contain max-h-[500px] mix-blend-multiply"
+            />
             
           </div>
 
