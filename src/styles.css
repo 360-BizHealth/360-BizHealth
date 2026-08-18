@@ -64,10 +64,7 @@
     to { transform: translateX(-50%); }
   }
   .hero-gradient {
-    background:
-      radial-gradient(circle at 80% 5%, #F0D8D3, rgba(240, 216, 211, 0) 35%),
-      linear-gradient(135deg, #FEF4EA 0%, #FFFBF8 100%);
-    background-size: 100% 100%;
+    background: #FEF4EA;
   }
   .glow-card {
     box-shadow:

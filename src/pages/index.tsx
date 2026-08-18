@@ -100,9 +100,6 @@ function Hero() {
           {/* Right Column: Hero Mockup Image */}
           <div className="lg:col-span-6 relative w-full flex items-center justify-center">
             
-            {/* Soft glow behind the image */}
-            <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 to-orange-500/10 rounded-3xl filter blur-2xl opacity-75 pointer-events-none scale-95"></div>
-            
             <img 
               src={heroIllustration} 
               alt="360 Biz Health platform" 
