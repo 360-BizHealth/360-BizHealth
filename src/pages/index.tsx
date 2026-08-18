@@ -296,9 +296,11 @@ function Testimonials() {
       <div className="mt-14 overflow-hidden">
         <div className="marquee marquee-slow items-stretch">
           {row.map((t, i) => (
-            <div key={i} className="w-[380px] shrink-0 rounded-3xl border border-border bg-card p-7">
-              <img src={img.quote} alt="" className="h-5 w-auto opacity-70" />
-              <p className="mt-4 text-sm leading-relaxed text-foreground/80">{t.q}</p>
+            <div key={i} className="w-[380px] shrink-0 rounded-3xl border border-border bg-card p-7 flex flex-col justify-between">
+              <div>
+                <img src={img.quote} alt="" className="h-5 w-auto opacity-70" />
+                <p className="mt-4 text-sm leading-relaxed text-foreground/80">{t.q}</p>
+              </div>
               <div className="mt-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <span className="text-sm font-semibold">{t.n}</span>
