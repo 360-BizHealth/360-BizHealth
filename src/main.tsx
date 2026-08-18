@@ -1,0 +1,76 @@
+import React, { useState, useEffect } from 'react'
+import ReactDOM from 'react-dom/client'
+import Index from './pages/index'
+import Contact from './pages/contact'
+import Login from './pages/login'
+import Pricing from './pages/pricing'
+import NotFound from './pages/not-found'
+import DetailPage from './pages/detail'
+import BlogsNews, { BlogArticle } from './pages/blogs-news'
+import './styles.css'
+
+function App() {
+  const [currentPage, setCurrentPage] = useState<string>('/')
+
+  const handleNavigate = (page: string) => {
+    setCurrentPage(page)
+    window.history.pushState({}, '', page)
+  }
+
+  useEffect(() => {
+    const handlePopState = () => {
+      const pathname = window.location.pathname
+      const isKnownStaticRoute = pathname === '/' || pathname === '/contact' || pathname === '/login' || pathname === '/pricing';
+      const isDynamicDetailRoute = pathname.startsWith('/products/') || pathname.startsWith('/services/') || pathname.startsWith('/resources/') || pathname.startsWith('/about/');
+      
+      if (isKnownStaticRoute || isDynamicDetailRoute) {
+        setCurrentPage(pathname)
+      } else {
+        setCurrentPage('404')
+      }
+    }
+
+    window.addEventListener('popstate', handlePopState)
+
+    // Set initial page based on current URL
+    const pathname = window.location.pathname
+    const isKnownStaticRoute = pathname === '/' || pathname === '/contact' || pathname === '/login' || pathname === '/pricing';
+    const isDynamicDetailRoute = pathname.startsWith('/products/') || pathname.startsWith('/services/') || pathname.startsWith('/resources/') || pathname.startsWith('/about/');
+    
+    if (isKnownStaticRoute || isDynamicDetailRoute) {
+      setCurrentPage(pathname)
+    } else {
+      setCurrentPage('404')
+    }
+
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [])
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPage]);
+
+  const isDynamicRoute = currentPage.startsWith('/products/') || 
+                         currentPage.startsWith('/services/') || 
+                         currentPage.startsWith('/resources/') || 
+                         currentPage.startsWith('/about/');
+
+  return (
+    <>
+      {currentPage === '/' && <Index onNavigate={handleNavigate} />}
+      {currentPage === '/contact' && <Contact onNavigate={handleNavigate} />}
+      {currentPage === '/login' && <Login onNavigate={handleNavigate} />}
+      {currentPage === '/pricing' && <Pricing onNavigate={handleNavigate} />}
+      {currentPage === '/resources/blogs-news' && <BlogsNews onNavigate={handleNavigate} />}
+      {currentPage.startsWith('/resources/blogs-news/') && <BlogArticle slug={currentPage.split('/').pop() || ''} onNavigate={handleNavigate} />}
+      {isDynamicRoute && currentPage !== '/resources/blogs-news' && !currentPage.startsWith('/resources/blogs-news/') && <DetailPage currentPath={currentPage} onNavigate={handleNavigate} />}
+      {currentPage === '404' && <NotFound onNavigate={handleNavigate} />}
+    </>
+  )
+}
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
