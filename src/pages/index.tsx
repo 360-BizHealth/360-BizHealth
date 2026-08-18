@@ -122,67 +122,44 @@ function Hero() {
 function Features() {
   const feats = [
     {
+      img: hrTechnology,
+      title: "End-to-End HRMS",
+      subtitle: "Attendance • Payroll • Expense • Performance",
+      bullets: [
+        "Real-time Attendance & Leave Management",
+        "Automated Payroll Processing & Salary Slips",
+        "Expense Reimbursements & Timesheets",
+        "Performance Management & Appraisals"
+      ]
+    },
+    {
       img: statutoryCompliance,
-      title: "Statutory Compliance",
-      subtitle: "PF • ESIC • LWF • Professional Tax",
+      title: "Payroll, TDS & Labour Compliance",
       bullets: [
-        "Compliance Registration & Filing",
-        "Labour Compliance Management",
-        "End-to-End Statutory Support"
-      ]
-    },
-    {
-      img: financialTaxation,
-      title: "Employee TDS & Labour Law Management",
-      bullets: [
-        "24Q Filing & TDS Returns",
-        "Form 16 Generation & TDS Management",
-        "Shops & Establishment & Labour Compliance"
-      ]
-    },
-    {
-      img: integrateImg,
-      title: "Company Registration & Compliance Filing",
-      bullets: [
-        "Private Limited Registration",
-        "Partnership & LLP Registration",
-        "GST Registration & Filing"
-      ]
-    },
-    {
-      img: insuranceAdvisory,
-      title: "Group Insurance",
-      bullets: [
-        "Group Health Insurance",
-        "Group Personal Accident Insurance",
-        "Employee Insurance Solutions"
+        "PF, ESIC, LWF Registration & Filing",
+        "TDS Returns (Form 24Q) & Form 16",
+        "Labour Law Advisory & Auditing",
+        "Shops & Establishment Compliance"
       ]
     },
     {
       img: gaugeImg,
-      title: "IPR & Brand Protection",
+      title: "IPR & Certifications",
       bullets: [
-        "Trademark Registration",
-        "Copyright Registration",
-        "Design Registration"
+        "Trademark Search & Filing",
+        "Copyright Registration for Code & Media",
+        "Design Patent Registration",
+        "Corporate Certifications & Startup India"
       ]
     },
     {
       img: envelopeImg,
-      title: "Corporate Team Retreats & Workations",
+      title: "Corporate Retreats & Workation",
       bullets: [
-        "Professionally Planned Business Retreats",
-        "Team-Building & Engagement Trips",
-        "Workations at Top Tourist Destinations"
-      ]
-    },
-    {
-      img: webSeoImg,
-      title: "Web, App & SEO",
-      bullets: [
-        "Website Development & Payment Gateway",
-        "Mobile Application Development",
-        "Google Ranking & SEO Services"
+        "Planned Corporate Offsites & Team Trips",
+        "Interactive Team Building Activities",
+        "Premium Workation Stays at Top Destinations",
+        "End-to-End Travel & Event Coordination"
       ]
     }
   ];
@@ -196,21 +173,26 @@ function Features() {
 
       <div className="mt-14 grid gap-6 md:grid-cols-2">
         {feats.map((f) => (
-          <div key={f.title} className="group overflow-hidden rounded-3xl border border-border bg-card transition hover:shadow-xl flex flex-col justify-between">
-            <div className="aspect-[16/10] overflow-hidden bg-surface">
-              <img src={f.img} alt={f.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+          <div key={f.title} className="group overflow-hidden rounded-3xl border border-border bg-card transition-all duration-300 hover:shadow-xl hover:border-primary/20 flex flex-col sm:flex-row h-full">
+            <div className="relative w-full h-44 sm:h-auto sm:w-2/5 shrink-0 overflow-hidden">
+              <img 
+                src={f.img} 
+                alt={f.title} 
+                className="h-full w-full object-cover transition-all duration-500 group-hover:scale-105" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-transparent to-black/10"></div>
             </div>
-            <div className="p-7 flex flex-col justify-between flex-grow">
+            <div className="p-6 flex flex-col justify-between flex-grow">
               <div>
-                <h3 className="text-xl font-extrabold text-slate-900 group-hover:text-primary transition-colors duration-300">{f.title}</h3>
+                <h3 className="text-lg font-black text-slate-900 group-hover:text-primary transition-colors duration-300 leading-snug">{f.title}</h3>
                 {f.subtitle && (
-                  <span className="inline-block mt-2 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-xs font-semibold">
+                  <span className="inline-block mt-2 px-2.5 py-0.5 rounded-full bg-primary/10 text-primary text-[10px] font-extrabold uppercase tracking-wider">
                     {f.subtitle}
                   </span>
                 )}
-                <ul className="mt-4 space-y-2">
+                <ul className="mt-4 space-y-2.5">
                   {f.bullets.map((b, idx) => (
-                    <li key={idx} className="flex items-start gap-2.5 text-sm text-slate-600 font-medium leading-relaxed">
+                    <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-655 font-semibold leading-relaxed">
                       <span className="mt-1 flex h-4 w-4 shrink-0 place-items-center rounded-full bg-primary/10 text-primary">
                         <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5">
                           <path d="M5 12l5 5L20 7" strokeLinecap="round" strokeLinejoin="round"/>
@@ -292,39 +274,6 @@ function HowItWorks() {
   );
 }
 
-function Integrations() {
-  const items = [
-    { src: img.nuvio, name: "Nuvio" },
-    { src: img.klyra, name: "Klyra" },
-    { src: img.knot, name: "Knot" },
-    { src: img.veltix, name: "Veltix" },
-  ];
-  const row = [...items, ...items, ...items, ...items];
-  return (
-    <section id="integrations" className="bg-surface py-24">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="text-center">
-          <span className="text-sm font-medium text-primary">Partners & Tools</span>
-          <h2 className="mx-auto mt-3 max-w-2xl text-4xl font-extrabold md:text-5xl">Works With Your Existing Systems</h2>
-          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">Integrate with payroll systems, accounting software, and tools your team already uses. No disruption, just efficiency.</p>
-          <a href="#" className="mt-8 inline-flex rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20">Explore Integrations</a>
-        </div>
-        <div className="mt-14 overflow-hidden">
-          <div className="marquee marquee-slow items-center">
-            {row.map((it, i) => (
-              <div key={i} className="flex flex-col items-center gap-3">
-                <div className="rounded-2xl bg-white p-4 shadow-md ring-1 ring-black/5">
-                  <img src={it.src} alt={it.name} className="h-16 w-16 object-contain" />
-                </div>
-                <span className="text-sm font-medium">{it.name}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Testimonials() {
   const items = [
@@ -352,7 +301,6 @@ function Testimonials() {
               <p className="mt-4 text-sm leading-relaxed text-foreground/80">{t.q}</p>
               <div className="mt-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <img src={t.img} alt={t.n} className="h-10 w-10 rounded-full object-cover" />
                   <span className="text-sm font-semibold">{t.n}</span>
                 </div>
                 <img src={img.stars} alt="rating" className="h-4 w-auto" />
@@ -550,7 +498,6 @@ export default function Index({ onNavigate }: { onNavigate: (page: string) => vo
       <Features />
       <Benefits />
       <HowItWorks />
-      <Integrations />
       <Testimonials />
       {/* <Pricing /> */}
       <Compare />
