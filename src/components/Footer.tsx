@@ -7,6 +7,10 @@ interface FooterProps {
 
 export default function Footer({ onNavigate }: FooterProps) {
   const handleLinkClick = (e: React.MouseEvent, href: string) => {
+    if (href === "#" || !href) {
+      e.preventDefault();
+      return;
+    }
     if (href.startsWith("#")) {
       e.preventDefault();
       const currentPath = window.location.pathname;
@@ -48,8 +52,8 @@ export default function Footer({ onNavigate }: FooterProps) {
   ];
 
   const companyLinks = [
-    { title: "About Us", href: "/about/our-story" },
-    { title: "Careers", href: "/about/careers", badge: "We're Hiring!" },
+    { title: "About Us", href: "#" },
+    { title: "Careers", href: "#", badge: "We're Hiring!" },
     { title: "Pricing", href: "/pricing" },
     { title: "Contact Us", href: "/contact" },
     { title: "Privacy Policy", href: "#" },

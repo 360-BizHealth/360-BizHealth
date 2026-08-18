@@ -145,11 +145,11 @@ export default function Contact({ onNavigate }: { onNavigate: (page: string) => 
                   <h3 className="text-base font-bold text-slate-900">Email Our Team</h3>
                   <p className="text-sm text-slate-400 mt-0.5">Direct query and custom cases</p>
                   <div className="mt-2.5 space-y-1">
-                    <a href="mailto:360bizhealth@gmail.com" className="text-sm font-semibold text-primary hover:underline block">
-                      360bizhealth@gmail.com
+                    <a href="mailto:contact@360bizhealth.com" className="text-sm font-semibold text-primary hover:underline block">
+                      contact@360bizhealth.com
                     </a>
-                    <a href="mailto:info@360bizhealth.io" className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors block">
-                      info@360bizhealth.io
+                    <a href="mailto:360bizhealth@gmail.com" className="text-sm font-semibold text-slate-600 hover:text-primary transition-colors block">
+                      360bizhealth@gmail.com
                     </a>
                   </div>
                 </div>

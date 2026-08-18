@@ -65,15 +65,8 @@ function Hero() {
           {/* Left Column: Content */}
           <div className="lg:col-span-6 text-left flex flex-col items-start lg:pr-16">
             
-            {/* Trusted Badge */}
-            <div className="inline-flex items-center gap-3 rounded-full border border-border bg-white px-3 py-1.5 text-xs font-medium text-foreground/80 shadow-sm mb-6">
-              <div className="flex -space-x-2">
-                <img src={img.p1} className="h-5 w-5 rounded-full border border-white object-cover" />
-                <img src={img.p2} className="h-5 w-5 rounded-full border border-white object-cover" />
-                <img src={img.p3} className="h-5 w-5 rounded-full border border-white object-cover" />
-              </div>
-              <span className="text-primary font-semibold">Trusted by 1M+ users</span>
-            </div>
+            {/* Spacer to preserve alignment after removing Trusted Badge */}
+            <div className="h-[58px]" />
 
             {/* Title */}
             <h1 className="text-[28px] md:text-[34px] lg:text-[40px] font-semibold tracking-[-0.02em] text-[#070707] leading-[1.2] max-w-[500px] animate-fade-in">
@@ -125,22 +118,6 @@ function Hero() {
   );
 }
 
-function TrustedBy() {
-  const logos = [img.brand1, img.brand2, img.brand3, img.brand4, img.brand5, img.brand6];
-  const row = [...logos, ...logos, ...logos];
-  return (
-    <section className="border-y border-border bg-surface py-14">
-      <p className="text-center text-sm font-medium uppercase tracking-widest text-muted-foreground">Blindly trusted by</p>
-      <div className="mt-8 overflow-hidden">
-        <div className="marquee items-center">
-          {row.map((l, i) => (
-            <img key={i} src={l} alt="" className="h-8 w-auto opacity-60 grayscale" />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Features() {
   const feats = [
@@ -570,7 +547,6 @@ export default function Index({ onNavigate }: { onNavigate: (page: string) => vo
     <div className="min-h-screen">
       <Header onNavigate={onNavigate} />
       <Hero />
-      <TrustedBy />
       <Features />
       <Benefits />
       <HowItWorks />

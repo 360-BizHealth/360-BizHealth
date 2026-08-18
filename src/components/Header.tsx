@@ -47,6 +47,10 @@ export default function Header({ onNavigate }: HeaderProps) {
   }, []);
 
   const handleLinkClick = (e: React.MouseEvent, href: string) => {
+    if (href === "#" || !href) {
+      e.preventDefault();
+      return;
+    }
     if (href.startsWith("#")) {
       e.preventDefault();
       const currentPath = window.location.pathname;
@@ -86,12 +90,12 @@ export default function Header({ onNavigate }: HeaderProps) {
     {
       title: "Careers",
       key: "careers",
-      href: "/about/careers",
+      href: "#",
     },
     {
       title: "About Us",
       key: "about",
-      href: "/about/our-story",
+      href: "#",
     },
     {
       title: "Contact Us",
