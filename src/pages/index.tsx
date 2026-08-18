@@ -70,7 +70,9 @@ function Hero() {
 
             {/* Title */}
             <h1 className="text-[28px] md:text-[34px] lg:text-[40px] font-semibold tracking-[-0.02em] text-[#070707] leading-[1.2] max-w-[500px] animate-fade-in">
-              An All-in-One Platform to Manage Your Business, HR & Compliance
+              All-in-One Platform to<br />
+              Manage Your Business,<br />
+              HR & Compliance
             </h1>
 
             {/* Description */}

@@ -155,19 +155,6 @@ export default function Contact({ onNavigate }: { onNavigate: (page: string) => 
                 </div>
               </div>
 
-              {/* Card 2: Call */}
-              <div className="group rounded-3xl border border-[#E8DDD3] bg-white p-6 transition-all duration-300 hover:shadow-lg hover:border-primary/20 flex gap-5">
-                <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-primary/10 text-primary group-hover:scale-105 transition-transform duration-300">
-                  <Phone className="w-5 h-5" />
-                </div>
-                <div>
-                  <h3 className="text-base font-bold text-slate-900">Talk to Support</h3>
-                  <p className="text-sm text-slate-400 mt-0.5">Mon–Fri, 9am–6pm IST</p>
-                  <a href="tel:+911145678910" className="text-sm font-semibold text-slate-700 hover:text-primary transition-colors mt-2 block">
-                    +91 (11) 4567-8910
-                  </a>
-                </div>
-              </div>
 
               {/* Card 3: Visit */}
               <div className="group rounded-3xl border border-[#E8DDD3] bg-white p-6 transition-all duration-300 hover:shadow-lg hover:border-primary/20 flex gap-5">

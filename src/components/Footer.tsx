@@ -183,8 +183,8 @@ export default function Footer({ onNavigate }: FooterProps) {
             <div className="space-y-2.5 pt-4 border-t border-[#E8DDD3]">
               <div className="flex items-center gap-2.5 text-xs text-slate-600 font-medium">
                 <Mail className="w-3.5 h-3.5 text-primary" />
-                <a href="mailto:support@360bizhealth.io" className="hover:text-primary transition-colors">
-                  support@360bizhealth.io
+                <a href="mailto:contact@360bizhealth.com" className="hover:text-primary transition-colors">
+                  contact@360bizhealth.com
                 </a>
               </div>
               <div className="flex items-start gap-2.5 text-xs text-slate-600 font-medium">
