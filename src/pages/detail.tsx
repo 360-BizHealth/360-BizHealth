@@ -37,6 +37,7 @@ import {
   HelpCircle,
   ChevronDown,
   ArrowRight,
+  ArrowLeft,
   Shield,
   Layers,
   Star,
@@ -52,7 +53,7 @@ import {
   Smartphone,
   MapPin,
   CheckCircle2,
-  FileText
+  FileText,
 } from "lucide-react";
 
 interface DetailProps {
@@ -819,6 +820,250 @@ const hrToolkitsList: ToolkitItem[] = [
   }
 ];
 
+const quikchexFeatureData = [
+  {
+    title: "Streamlined Onboarding",
+    description: "Optimize the onboarding experience with structured tasks, self-onboarding, and first-day essentials",
+    image: "https://quikchex.in/wp-content/uploads/2025/08/Streamlined-Onboarding.webp",
+    imageAlt: "Streamlined Onboarding",
+    imageFirst: true,
+    bullets: [
+      ["Task Assignments", "Define tasks to guide new hires and internal team members through each onboarding step"],
+      ["Self-Onboarding", "Empower employees to complete onboarding steps independently"],
+      ["HR Policy Acknowledgement", "Ensure employees review and acknowledge HR policies"],
+      ["Automated Tracking", "Monitor completion of onboarding tasks and onboarding processes through a dashboard"]
+    ]
+  },
+  {
+    title: "Offboarding Workflow",
+    description: "Manage exits with a structured workflow, from separation initiation to exit interviews, for a seamless offboarding process",
+    image: "https://quikchex.in/wp-content/uploads/2025/08/Offboarding-Workflow.webp",
+    imageAlt: "Offboarding Workflow",
+    imageFirst: false,
+    bullets: [
+      ["Employee Separation Requests", "Enable employees to initiate separation requests through the ESS portal"],
+      ["Exit Interviews", "Gather insights through structured exit interviews, facilitating organizational improvements"],
+      ["Checklist Management", "Assign tasks to all stakeholders in the exit process for smooth transitions"],
+      ["Attrition Analysis", "Define and identify separation reason for each departing employee"]
+    ]
+  },
+  {
+    title: "Centralized Employee Database",
+    description: "Maintain a complete, secure repository of employee information with customizable fields and document storage",
+    image: "https://quikchex.in/wp-content/uploads/2024/11/screely-1732768593425.png",
+    imageAlt: "Centralized Employee Database",
+    imageFirst: true,
+    bullets: [
+      ["Customizable Data Fields", "Capture essential employee details unique to your organization’s needs"],
+      ["Document Management", "Securely store documents, certificates, and other important records"],
+      ["Easy Access & Updates", "Retrieve and update employee information quickly when needed"],
+      ["Data Change Requests", "Empower employees to modify their personal information from their ESS portals"]
+    ]
+  },
+  {
+    title: "Confirmation Workflow",
+    description: "Automate employee confirmation processes, from assessment to final decision-making, for timely confirmations",
+    image: "https://quikchex.in/wp-content/uploads/2025/08/Confirmation-Workflow.png",
+    imageAlt: "Confirmation Workflow",
+    imageFirst: false,
+    bullets: [
+      ["Customizable Milestones", "Define criteria for employee confirmations based on company policies"],
+      ["Confirmation Assessments", "Conduct and record performance assessments for confirmation decisions"],
+      ["Automated Reminders", "Notify managers and HR when probation periods are nearing completion"],
+      ["Efficient Approvals", "Streamline the approval process for faster decision-making"]
+    ]
+  },
+  {
+    title: "Letter Generation & E-Signing",
+    description: "Create, manage, and digitally sign employee letters, reducing paperwork and ensuring secure documentation",
+    image: "https://quikchex.in/wp-content/uploads/2025/08/Letter-Generation-E-Signing.png",
+    imageAlt: "Letter Generation and E-Signing",
+    imageFirst: true,
+    bullets: [
+      ["Customizable Letter Templates", "Generate offer letters, confirmation letters, and more with ease"],
+      ["Digital Signing Options", "Enable employees and managers to sign documents electronically"],
+      ["Centralized Storage", "Keep a record of all generated and signed documents for easy retrieval"]
+    ]
+  }
+];
+
+const quikchexFaqs = [
+  ["Can employees initiate their own separation requests?", "Yes, employees can initiate separation requests directly through their Employee Self-Service (ESS) portal, streamlining the offboarding process and allowing for smoother communication."],
+  ["How does the onboarding workflow help new employees settle in?", "The onboarding workflow includes task assignments, self-onboarding options, first-day induction, and an onboarding survey. It also enables new hires to acknowledge HR policies, ensuring a smooth and compliant start to their employment."],
+  ["Is it possible to customize the employee master database fields?", "Absolutely! The employee master database allows for customizable data fields, making it easy to capture and organize employee details that are specific to your organization’s needs."],
+  ["Can managers track and assess probation completions for employee confirmations?", "Yes, the confirmation workflow includes customizable milestones and an assessment feature, helping managers conduct structured performance assessments to make timely confirmation decisions."],
+  ["Does the system support digital signing for employee letters?", "Yes, our module enables digital generation and signing of documents like offer letters and confirmation letters, with centralized storage for secure and easy access to all signed records."],
+  ["Are exit interviews part of the offboarding workflow?", "Yes, exit interviews are included as part of the offboarding process to capture valuable insights, allowing HR to gather feedback for continuous improvement."],
+  ["Can we manage company-wide and regional policies within the onboarding process?", "Yes, you can assign HR policies within the onboarding workflow, allowing new hires to review and acknowledge relevant company and regional policies during their onboarding process."]
+];
+
+const quikchexTestimonials = [
+  {
+    quote: "The Quikchex HRMS platform has been a valuable addition to our HR processes at IIDE. The employee directory works seamlessly, and the leave process setup is intuitive, helping streamline approvals efficiently. The payroll and attendance management modules have also been reliable and easy, making our HR operations smoother.",
+    name: "Anushka Rajani Jhaveri",
+    role: "Chief Operating Officer",
+    company: "IIDE",
+    image: "https://quikchex.in/wp-content/uploads/2024/08/anushka-rajani-150x150.jpg"
+  },
+  {
+    quote: "The user-friendly Quikchex interface has streamlined our processes, saving valuable time. The payroll and attendance system ensures accurate, timely processing. We are particularly impressed with the Mobile App’s attendance capture, eliminating the need for biometric punching. From employee onboarding to performance management, the platform has significantly improved our efficiency. Grateful for the team’s support.",
+    name: "Bhavna Manchanda",
+    role: "Senior Manager - HR",
+    company: "SEED Global Education",
+    image: "https://quikchex.in/wp-content/uploads/2024/08/bhavna-Seed-Global-1-150x150.jpeg"
+  },
+  {
+    quote: "It’s been over five years since we started using Quikchex software, and it has proven to be incredibly user-friendly and efficient. The platform has consistently made our processes smoother and more streamlined, contributing significantly to our operational ease.",
+    name: "Sneha Gajjar",
+    role: "Human Resource – Business Partner",
+    company: "Equentia Natural Resources",
+    image: "https://quikchex.in/wp-content/uploads/2024/08/1538723131503-150x150.jpg"
+  },
+  {
+    quote: "We have been using Quikchex Payroll and Employee Management Software since 2017. It is very user-friendly, and the support provided by the team on every module, along with the training, is amazing. The GPS-based attendance module has significantly reduced our payroll processing time from 7 days to 1 day. I have recommended this software to many of my HR colleagues.",
+    name: "Vilas Desai",
+    role: "Head – HR",
+    company: "SID Hospitality Pvt Ltd",
+    image: "https://quikchex.in/wp-content/uploads/2024/08/Vilas-Desai-150x150.png"
+  },
+  {
+    quote: "Quikchex provides outstanding support, with a highly knowledgeable and personable team that resolves issues promptly and effectively. Their software handles all payroll and HRMS needs seamlessly, allowing the HR team to focus on innovation. Always just a call away, the Quikchex team handles situations efficiently and positively, making it a brilliant solution backed by an exceptional team.",
+    name: "Mr. Nilesh Chandole",
+    role: "Head HR",
+    company: "Waterways Leisure Tourism Private Limited",
+    image: "https://quikchex.in/wp-content/uploads/2024/08/nilesh-chandole-150x150.png"
+  }
+];
+
+function QuikchexFooter({ onNavigate }: { onNavigate: (page: string) => void }) {
+  const productLinks = ["HR Software", "Payroll Software", "Attendance Management Software", "Leave Management System", "Expense Management Software", "Performance Management Software", "Recruitment Management Software", "Employee Engagement", "Employee Timesheet Software", "Flexi Benefits"];
+  const serviceLinks = ["Payroll Outsourcing", "Labour Compliance Management", "Compliance Audit", "Vendor Audit"];
+  const aboutLinks = ["Company Overview", "Partners", "Trust Center", "Plans", "Contact Us"];
+  const linkTo = (label: string) => label === "Contact Us" ? "/contact" : "#";
+
+  return (
+    <footer className="bg-white pb-8 pt-20 text-[#444444]">
+      <div className="quikchex-content-width">
+        <div className="quikchex-cta-card mb-20 overflow-hidden rounded-[24px] border border-[#7F7F7F2B] px-6 py-20 text-center">
+          <div className="relative z-10 mx-auto max-w-[550px]">
+            <h2 className="mx-auto max-w-[540px] text-4xl font-semibold leading-tight text-white md:text-[56px]">Ready to optimize your HR operations?</h2>
+            <p className="mx-auto mt-5 max-w-[550px] text-base leading-relaxed text-white">Sign up today and join thousands of businesses that trust our solution to manage their HR and payroll needs efficiently.</p>
+            <button onClick={() => onNavigate("/contact")} className="mt-6 inline-flex items-center gap-2.5 rounded-full bg-[#213343] px-6 py-3.5 text-base text-white transition hover:bg-[#172630]">Book a Demo <ArrowRight className="h-4 w-4" /></button>
+          </div>
+        </div>
+
+        <div className="grid gap-12 border-b border-slate-200 pb-14 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-8">
+          <div>
+            <img src="https://quikchex.in/wp-content/uploads/2024/08/Quikchex-logo.png" alt="Quikchex" className="mb-5 h-10 w-auto object-contain object-left" />
+            <h5 className="max-w-[260px] text-base font-normal leading-relaxed text-[#444444]">HRMS, Payroll and Compliance Solutions for India. Modern HR solution for Indian Businesses.</h5>
+            <div className="mt-6 h-px max-w-[260px] bg-slate-200" />
+          </div>
+          <div>
+            <h3 className="mb-5 text-base font-semibold text-[#070707]">Products</h3>
+            <ul className="space-y-3 text-sm">{productLinks.map((link) => <li key={link}><a href="#" className="hover:text-[#FF5C35]">{link}</a></li>)}</ul>
+          </div>
+          <div>
+            <h3 className="mb-5 text-base font-semibold text-[#070707]">Services</h3>
+            <ul className="space-y-3 text-sm">{serviceLinks.map((link) => <li key={link}><a href="#" className="hover:text-[#FF5C35]">{link}</a></li>)}</ul>
+          </div>
+          <div>
+            <h3 className="mb-5 text-base font-semibold text-[#070707]">About Us</h3>
+            <ul className="space-y-3 text-sm">{aboutLinks.map((link) => <li key={link}><a href={linkTo(link)} onClick={link === "Contact Us" ? (event) => { event.preventDefault(); onNavigate("/contact"); } : undefined} className="hover:text-[#FF5C35]">{link}</a></li>)}</ul>
+            <h3 className="mb-5 mt-8 text-base font-semibold text-[#070707]">Resources</h3>
+            <ul className="space-y-3 text-sm"><li><a href="#" className="hover:text-[#FF5C35]">HR Toolkit</a></li><li><a href="#" className="hover:text-[#FF5C35]">Blog</a></li></ul>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-5 pt-6 text-sm md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-wrap gap-x-5 gap-y-2"><span>© Quikchex 2026.</span><span>All Rights Reserved.</span><a href="https://quikchex.in/terms-and-conditions/" className="hover:text-[#FF5C35]">Terms and conditions</a><a href="https://quikchex.in/privacy-policy/" className="hover:text-[#FF5C35]">Privacy policy</a></div>
+          <div className="flex items-center gap-7 text-lg font-semibold text-[#213343]"><a href="https://in.linkedin.com/company/quikchex-private-limited" aria-label="LinkedIn" className="hover:text-[#FF5C35]">in</a><a href="https://x.com/quikchex" aria-label="X" className="hover:text-[#FF5C35]">𝕏</a><a href="https://www.facebook.com/quikchex/" aria-label="Facebook" className="hover:text-[#FF5C35]">f</a></div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function QuikchexHrmsPage({ onNavigate }: { onNavigate: (page: string) => void }) {
+  const [faqOpen, setFaqOpen] = useState<number | null>(0);
+  const [testimonialIndex, setTestimonialIndex] = useState(0);
+  const testimonial = quikchexTestimonials[testimonialIndex];
+
+  return (
+    <div className="quikchex-page min-h-screen overflow-x-hidden bg-white text-[#444444]">
+      <Header onNavigate={onNavigate} />
+      <main>
+        <section className="quikchex-hero">
+          <div className="quikchex-hero-layout">
+            <div className="quikchex-hero-copy flex flex-col justify-center text-left">
+              <h1 className="max-w-[416px] text-4xl font-normal leading-[1.2] text-white md:text-[44px]">All-in-One HR Software Solution for Modern Businesses</h1>
+              <p className="max-w-[480px] pb-10 pt-5 text-base leading-[1.6] text-[#E4E7EB]">Our comprehensive HRMS covers every stage—from onboarding to retirement. It serves as a central repository for all employee data.</p>
+              <button onClick={() => onNavigate("/contact")} className="inline-flex w-fit items-center gap-2 rounded-full bg-[#FF5C35] px-6 py-3.5 text-base text-white transition hover:bg-[#e94e2c]">Book A Demo <ArrowRight className="h-4 w-4" /></button>
+            </div>
+            <div className="quikchex-hero-art"><img src="https://quikchex.in/wp-content/uploads/2025/01/HR-Software-Collage-3-scaled.webp" alt="Quikchex HR software dashboard" /></div>
+          </div>
+        </section>
+
+        <section className="py-14 text-center">
+          <div className="quikchex-content-width">
+            <p className="mb-9 text-base text-[#444444]"><strong>Trusted by over 5000+ HR Managers</strong></p>
+            <div className="grid grid-cols-2 items-center gap-8 md:grid-cols-3 lg:grid-cols-6 lg:gap-10">
+              {["https://quikchex.in/wp-content/uploads/2024/09/Acko_General_Insurance_logo.svg.png", "https://quikchex.in/wp-content/uploads/2024/09/Mad-over-donuts.jpg", "https://quikchex.in/wp-content/uploads/2025/02/crossword_logo_small_2d787591-0993-421e-999c-246295b476c4_small.svg", "https://quikchex.in/wp-content/uploads/2026/06/pittie-group-logo.png", "https://quikchex.in/wp-content/uploads/2024/12/coverfox.png", "https://quikchex.in/wp-content/uploads/2024/09/LogiNext_Logo.png"].map((logo) => <div key={logo} className="flex h-10 items-center justify-center"><img className="h-[70px] w-[130px] object-contain" src={logo} alt="Customer logo" /></div>)}
+            </div>
+          </div>
+        </section>
+
+        <section className="pb-12 pt-8 text-center">
+          <div className="quikchex-content-width">
+            <h2 className="mx-auto max-w-[665px] text-[28px] font-semibold leading-[1.3] text-[#000000]">Advanced HR Software Features and Integrations</h2>
+            <p className="mx-auto max-w-[520px] pb-12 pt-4 text-base leading-[1.6] text-[#444444]">HR Software and Talent Management System Integration. Organize and simplify your employee lifecycle through automated workflows</p>
+          </div>
+        </section>
+
+        <section>
+          <div className="quikchex-content-width">
+            {quikchexFeatureData.map((feature) => (
+              <div key={feature.title} className={`quikchex-feature-row ${feature.imageFirst ? "" : "flex-row-reverse"}`}>
+                <div className="quikchex-feature-visual"><img src={feature.image} alt={feature.imageAlt} /></div>
+                <div className="text-left">
+                  <h2 className="text-[28px] font-semibold leading-[1.3] text-[#000000]">{feature.title}</h2>
+                  <p className="pt-4 text-base leading-[1.6] text-[#444444]">{feature.description}</p>
+                  <ul className="space-y-4 pt-6">{feature.bullets.map(([label, text]) => <li key={label} className="flex items-start gap-3 text-base leading-[1.6] text-[#444444]"><CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-[#FF5C35]" /><span><strong className="text-[#000000]">{label}:</strong> {text}</span></li>)}</ul>
+                  <button onClick={() => onNavigate("/contact")} className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#213343] px-[18px] py-[13px] text-base text-white transition hover:bg-[#172630]">Learn More <ArrowRight className="h-4 w-4" /></button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="border-y border-[#7F7F7F2B] py-12">
+          <div className="quikchex-content-width">
+            <div className="quikchex-testimonial-card relative rounded-[24px] px-6 py-10 text-center text-white shadow-[0_6px_12px_-2px_rgba(0,0,0,.04)] md:px-20">
+              <span className="inline-flex rounded-full border border-[#FBFBFD12] bg-[#FBFBFD12] px-4 py-1.5 text-sm text-[#FDA29B]">Testimonials</span>
+              <h2 className="mt-5 text-[28px] font-semibold text-white">Hear from our users</h2>
+              <div className="mt-9 flex items-center justify-between gap-4">
+                <button onClick={() => setTestimonialIndex((testimonialIndex - 1 + quikchexTestimonials.length) % quikchexTestimonials.length)} aria-label="Previous testimonial" className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/20 text-white transition hover:bg-white/10"><ArrowLeft className="h-4 w-4" /></button>
+                <div className="max-w-[790px]">
+                  <p className="text-lg italic leading-[1.6] text-white">“{testimonial.quote}”</p>
+                  <div className="mt-7 flex items-center justify-center gap-3"><img src={testimonial.image} alt={testimonial.name} className="h-12 w-12 rounded-full object-cover" /><div className="text-left"><p className="text-sm font-semibold text-white">{testimonial.name}</p><p className="text-xs text-white/70">{testimonial.role} · {testimonial.company}</p></div></div>
+                </div>
+                <button onClick={() => setTestimonialIndex((testimonialIndex + 1) % quikchexTestimonials.length)} aria-label="Next testimonial" className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/20 text-white transition hover:bg-white/10"><ArrowRight className="h-4 w-4" /></button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="py-20">
+          <div className="quikchex-content-width grid gap-12 lg:grid-cols-2">
+            <div className="text-left lg:pl-12"><h2 className="max-w-[420px] text-[28px] font-semibold leading-[1.3] text-[#000000]">Frequently asked questions</h2><p className="max-w-[360px] pt-5 text-base leading-[1.6] text-[#444444]">Have any questions? Don’t hesitate to contact us!</p><button onClick={() => onNavigate("/contact")} className="mt-7 rounded-full bg-[#FF5C35] px-6 py-3.5 text-base text-white transition hover:bg-[#e94e2c]">Contact Us</button></div>
+            <div className="rounded-xl bg-[#7F7F7F0D] p-4">{quikchexFaqs.map(([question, answer], index) => { const isOpen = faqOpen === index; return <div key={question} className="mb-2.5 rounded-2xl bg-white p-4 last:mb-0"><button onClick={() => setFaqOpen(isOpen ? null : index)} className="flex w-full items-center justify-between gap-4 text-left text-base font-semibold text-[#000000]"><span>{question}</span><span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-[#A0A0AB7A] text-xl font-normal leading-none text-[#A0A0AB]">{isOpen ? "−" : "+"}</span></button>{isOpen && <p className="mt-1.5 pr-5 text-sm leading-[1.6] text-[#444444]">{answer}</p>}</div>; })}</div>
+          </div>
+        </section>
+      </main>
+      <QuikchexFooter onNavigate={onNavigate} />
+    </div>
+  );
+}
+
 // ----------------- RENDER RESOURCE/TOOLKIT GRID LAYOUT -----------------
 export default function DetailPage({ currentPath, onNavigate }: DetailProps) {
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
@@ -833,6 +1078,10 @@ export default function DetailPage({ currentPath, onNavigate }: DetailProps) {
     currentPath.startsWith("/resources/") ||
     currentPath.includes("careers") ||
     currentPath.includes("about");
+
+  if (currentPath === "/services/hrms") {
+    return <QuikchexHrmsPage onNavigate={onNavigate} />;
+  }
 
   // Fetch Page Data OR Fallback
   const fallbackKey = "/products/attendance-leave";
