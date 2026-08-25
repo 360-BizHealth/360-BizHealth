@@ -106,14 +106,18 @@ export default function Header({ onNavigate }: HeaderProps) {
 
   return (
     <>
-      {/* ----------------- DESKTOP HEADER (Capsule Navigation) ----------------- */}
-      <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 lg:block hidden ${isScrolled ? "py-2" : "py-4"}`}>
-        <div className="mx-auto max-w-[1180px] px-4 sm:px-6">
+      <div className="fixed inset-x-0 top-0 z-50 bg-[#46077a] px-4 py-2 text-center text-xs font-medium text-white sm:text-sm">
+        Practical HR, payroll and compliance intelligence for growing Indian businesses <a href="/contact" onClick={(e) => handleLinkClick(e, "/contact")} className="ml-2 font-semibold text-[#ffdc79]">Talk to an expert →</a>
+      </div>
+
+      {/* ----------------- DESKTOP HEADER ----------------- */}
+      <div className="fixed top-9 left-0 right-0 z-50 hidden bg-white shadow-[0_2px_5px_rgba(0,0,0,0.12)] transition-all duration-300 lg:block">
+        <div className="mx-auto max-w-[1312px] px-5 sm:px-6">
           <header
-            className={`flex items-center justify-between bg-white border border-slate-100 rounded-full transition-all duration-300 ${
-              isScrolled 
-                ? "h-[66px] px-8 shadow-[0_8px_20px_-6px_rgba(0,0,0,0.08)]" 
-                : "h-[78px] px-10 shadow-[0_12px_32px_-8px_rgba(0,0,0,0.05)]"
+            className={`flex items-center justify-between border-b border-slate-100 bg-white transition-all duration-300 ${
+              isScrolled
+                ? "h-[66px] px-2"
+                : "h-[74px] px-0"
             }`}
           >
             {/* Logo */}
@@ -213,7 +217,7 @@ export default function Header({ onNavigate }: HeaderProps) {
               <a
                 href="/login"
                 onClick={(e) => handleLinkClick(e, "/login")}
-                className="px-6 py-2.5 text-[14px] font-semibold text-white bg-primary rounded-full hover:bg-primary/95 transition-all duration-300 hover:scale-[1.01] shadow-sm shadow-primary/10"
+                className="px-4 py-2.5 text-[14px] font-semibold text-[#272127] hover:text-primary transition-colors"
               >
                 Login
               </a>
@@ -223,7 +227,7 @@ export default function Header({ onNavigate }: HeaderProps) {
       </div>
 
       {/* ----------------- MOBILE HEADER (Flat Full-Width White Bar) ----------------- */}
-      <div className="fixed top-0 left-0 right-0 z-50 lg:hidden">
+      <div className="fixed top-9 left-0 right-0 z-50 lg:hidden">
         <header
           className={`flex items-center justify-between bg-white h-16 px-5 transition-all duration-300 ${
             isScrolled 
