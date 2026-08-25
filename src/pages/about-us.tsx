@@ -200,20 +200,22 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
     <div className="min-h-screen overflow-x-hidden bg-white text-[#272127]">
       <Header onNavigate={onNavigate} />
       <main>
-        <section className="relative overflow-hidden bg-gradient-to-b from-[#F3FCFF] to-white pb-16 pt-32 lg:pb-20 lg:pt-40">
-          <div className="pointer-events-none absolute -right-28 top-20 h-[520px] w-[520px] rounded-full border border-primary/10" />
-          <div className="pointer-events-none absolute -right-2 top-40 h-[320px] w-[320px] rounded-full border border-primary/10" />
-          <div className="pointer-events-none absolute left-0 top-20 h-72 w-72 rounded-full bg-[#FBFFF7] blur-[90px]" />
+        <section className="relative overflow-hidden bg-gradient-to-b from-[#F9F2FF] to-white pb-16 pt-32 lg:pb-20 lg:pt-40">
+          <div className="pointer-events-none absolute -right-28 top-20 h-[520px] w-[520px] rounded-full border border-[#e6377a]/20" />
+          <div className="pointer-events-none absolute -right-2 top-40 h-[320px] w-[320px] rounded-full border border-[#e6377a]/20" />
+          <div className="pointer-events-none absolute left-0 top-20 h-72 w-72 rounded-full bg-[#FFF7F1] blur-[90px]" />
           <div className="relative mx-auto max-w-[1312px] px-6">
             <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-24">
               <div className="max-w-[690px]">
-                <p className="mb-6 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-                  About 360 Biz Health
+                <p className="mb-6 text-xs font-semibold uppercase tracking-[0.22em] text-[#e6377a]">
+                  Independent HRMS implementation partner
                 </p>
-                <h1 className="text-[40px] font-extrabold leading-[1.16] tracking-[-0.045em] text-[#032532] md:text-[52px] lg:text-[58px]">
+                <h1 className="font-serif text-[40px] font-bold leading-[1.16] tracking-[-0.045em] text-[#46077a] md:text-[52px] lg:text-[58px]">
                   We help growing businesses bring order to
                   <br />
-                  <span className="text-primary">HR, payroll and compliance.</span>
+                  <span className="text-[#e6377a]">HR, payroll and compliance —</span>
+                  <br />
+                  without locking you into one software.
                 </h1>
                 <p className="mt-7 max-w-[610px] text-[17px] leading-8 text-[#272127]">
                   Without locking you into one software. 360 Biz Health helps startups, SMEs and
@@ -234,15 +236,15 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
                 </a>
               </div>
               <div className="relative mx-auto w-full max-w-[500px] lg:ml-auto">
-                <div className="relative overflow-hidden rounded-[36px] bg-[#FBFFF7] px-8 pb-10 pt-9 md:px-10">
-                  <div className="absolute -right-12 -top-12 h-48 w-48 rounded-full border border-primary/20" />
-                  <Sparkles className="relative h-7 w-7 text-primary" />
-                  <p className="relative mt-8 max-w-[340px] text-[25px] font-semibold leading-[1.35] tracking-[-0.03em] text-[#032532]">
+                <div className="relative overflow-hidden rounded-[36px] bg-[#46077a] px-8 pb-10 pt-9 text-white shadow-[0_22px_50px_-25px_rgba(70,7,122,0.7)] md:px-10">
+                  <div className="absolute -right-12 -top-12 h-48 w-48 rounded-full border border-[#ffdc79]/30" />
+                  <Sparkles className="relative h-7 w-7 text-[#ffdc79]" />
+                  <p className="relative mt-8 max-w-[340px] font-serif text-[25px] font-semibold leading-[1.35] tracking-[-0.03em] text-white">
                     A business does not grow in silos. Its HR operations should not have to either.
                   </p>
-                  <div className="relative mt-9 border-t border-[#032532]/15 pt-5 text-sm leading-6 text-[#272127]">
+                  <div className="relative mt-9 border-t border-white/20 pt-5 text-sm leading-6 text-white/80">
                     <p>One number to call instead of five.</p>
-                    <p className="mt-1 font-semibold text-primary">
+                    <p className="mt-1 font-semibold text-[#ffdc79]">
                       Independent advice. Practical delivery.
                     </p>
                   </div>
@@ -250,8 +252,8 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
               </div>
             </div>
 
-            <div className="mt-20 grid gap-8 border-t border-[#032532]/15 pt-10 lg:grid-cols-[1.8fr_1fr] lg:gap-24">
-              <h2 className="max-w-[720px] text-[27px] font-semibold leading-[1.35] tracking-[-0.025em] text-[#272127]">
+            <div className="mt-20 grid gap-8 border-t border-[#46077a]/15 pt-10 lg:grid-cols-[1.8fr_1fr] lg:gap-24">
+              <h2 className="max-w-[720px] font-serif text-[27px] font-semibold leading-[1.35] tracking-[-0.025em] text-[#272127]">
                 Most businesses do not set out to manage five different vendors for their HR needs.
               </h2>
               <p className="border-l-2 border-[#e6377a]/50 pl-6 text-[16px] leading-7 text-[#272127]">
@@ -267,7 +269,7 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
             Our Story
           </p>
           <div className="mt-5 grid gap-8 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
-            <h2 className="text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#032532] md:text-[40px]">
+            <h2 className="font-serif text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#46077a] md:text-[40px]">
               The business is growing. HR is no longer a spreadsheet problem.
             </h2>
             <div className="space-y-5 text-[17px] leading-8 text-[#272127]">
@@ -296,14 +298,14 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
           </div>
         </section>
 
-        <section className="bg-gradient-to-b from-white via-[#FBFFF7] to-white py-20 lg:py-28">
+        <section className="bg-gradient-to-b from-white via-[#FFF7F1] to-white py-20 lg:py-28">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="grid gap-10 lg:grid-cols-[0.75fr_1.25fr] lg:gap-24">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#e6377a]">
                   What Makes 360 Biz Health Different
                 </p>
-                <h2 className="mt-5 text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#032532] md:text-[42px]">
+                <h2 className="mt-5 font-serif text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#46077a] md:text-[42px]">
                   The right fit comes before the software.
                 </h2>
               </div>
@@ -325,7 +327,7 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
                 </p>
               </div>
             </div>
-            <div className="mt-16 grid border-y border-[#032532]/15 md:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-16 grid border-y border-[#46077a]/15 md:grid-cols-2 lg:grid-cols-4">
               {[
                 ["Independent", "No single-vendor incentive."],
                 ["Connected", "One view across HR operations."],
@@ -334,9 +336,9 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
               ].map(([title, detail]) => (
                 <div
                   key={title}
-                  className="border-b border-[#032532]/15 py-7 md:px-6 md:last:border-b-0 lg:border-b-0 lg:border-r lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
+                  className="border-b border-[#46077a]/15 py-7 md:px-6 md:last:border-b-0 lg:border-b-0 lg:border-r lg:first:pl-0 lg:last:border-r-0 lg:last:pr-0"
                 >
-                  <h3 className="text-lg font-semibold text-[#032532]">{title}</h3>
+                  <h3 className="text-lg font-semibold text-[#46077a]">{title}</h3>
                   <p className="mt-2 text-sm leading-6 text-[#272127]">{detail}</p>
                 </div>
               ))}
@@ -350,20 +352,20 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#e6377a]">
                 How We Work
               </p>
-              <h2 className="mt-5 text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#032532] md:text-[42px]">
+              <h2 className="mt-5 font-serif text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#46077a] md:text-[42px]">
                 A clear path from uncertainty to order.
               </h2>
             </div>
-            <div className="border-t border-[#032532]/15">
+            <div className="border-t border-[#46077a]/15">
               {processSteps.map(([number, title, detail]) => (
                 <div
                   key={number}
-                  className="grid gap-4 border-b border-[#032532]/15 py-7 sm:grid-cols-[58px_145px_1fr] sm:items-start sm:gap-6"
+                  className="grid gap-4 border-b border-[#46077a]/15 py-7 sm:grid-cols-[58px_145px_1fr] sm:items-start sm:gap-6"
                 >
                   <span className="text-sm font-semibold tracking-[0.18em] text-[#e6377a]">
                     {number}
                   </span>
-                  <h3 className="text-xl font-semibold tracking-[-0.02em] text-[#032532]">
+                  <h3 className="text-xl font-semibold tracking-[-0.02em] text-[#46077a]">
                     {title}
                   </h3>
                   <p className="text-[15px] leading-7 text-[#272127]">{detail}</p>
@@ -373,14 +375,14 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
           </div>
         </section>
 
-        <section className="bg-[#F8FDFF] py-20 lg:py-28">
+        <section className="bg-[#F9F2FF] py-20 lg:py-28">
           <div className="mx-auto max-w-[1180px] px-6">
-            <div className="flex flex-wrap items-end justify-between gap-7 border-b border-[#032532]/15 pb-10">
+            <div className="flex flex-wrap items-end justify-between gap-7 border-b border-[#46077a]/15 pb-10">
               <div className="max-w-[620px]">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#e6377a]">
                   What We Do
                 </p>
-                <h2 className="mt-5 text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#032532] md:text-[42px]">
+                <h2 className="mt-5 font-serif text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#46077a] md:text-[42px]">
                   The work behind a well-run business.
                 </h2>
               </div>
@@ -394,13 +396,13 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
                 return (
                   <article
                     key={number}
-                    className="grid gap-5 border-b border-[#032532]/15 py-8 md:grid-cols-[60px_48px_235px_1fr] md:items-center md:gap-6"
+                    className="grid gap-5 border-b border-[#46077a]/15 py-8 md:grid-cols-[60px_48px_235px_1fr] md:items-center md:gap-6"
                   >
                     <span className="text-sm font-semibold tracking-[0.18em] text-[#e6377a]">
                       {number}
                     </span>
                     <ServiceIcon className="h-5 w-5 text-[#e6377a]" />
-                    <h3 className="text-xl font-semibold leading-tight tracking-[-0.02em] text-[#032532]">
+                    <h3 className="text-xl font-semibold leading-tight tracking-[-0.02em] text-[#46077a]">
                       {title}
                     </h3>
                     <p className="text-[15px] leading-7 text-[#272127]">{detail}</p>
@@ -418,7 +420,7 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#e6377a]">
                   Who We Serve
                 </p>
-                <h2 className="mt-5 text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#032532] md:text-[42px]">
+                <h2 className="mt-5 font-serif text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#46077a] md:text-[42px]">
                   At every stage of growth.
                 </h2>
                 <p className="mt-5 text-[16px] leading-7 text-[#272127]">
@@ -427,10 +429,10 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
                   stage to change.
                 </p>
               </div>
-              <div className="grid border-t border-[#032532]/15 sm:grid-cols-2 sm:gap-x-10">
+              <div className="grid border-t border-[#46077a]/15 sm:grid-cols-2 sm:gap-x-10">
                 {audiences.map(([title, detail]) => (
-                  <article key={title} className="border-b border-[#032532]/15 py-7">
-                    <h3 className="text-xl font-semibold tracking-[-0.02em] text-[#032532]">
+                  <article key={title} className="border-b border-[#46077a]/15 py-7">
+                    <h3 className="text-xl font-semibold tracking-[-0.02em] text-[#46077a]">
                       {title}
                     </h3>
                     <p className="mt-3 text-[15px] leading-7 text-[#272127]">{detail}</p>
@@ -441,24 +443,24 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
           </div>
         </section>
 
-        <section className="bg-gradient-to-b from-[#F8FDFF] to-white py-20 lg:py-28">
+        <section className="bg-gradient-to-b from-[#F9F2FF] to-white py-20 lg:py-28">
           <div className="mx-auto max-w-[1180px] px-6">
             <div className="mx-auto max-w-[660px] text-center">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#e6377a]">
                 What Guides Our Work
               </p>
-              <h2 className="mt-5 text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#032532] md:text-[42px]">
+              <h2 className="mt-5 font-serif text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#46077a] md:text-[42px]">
                 Principles that keep the partnership useful.
               </h2>
             </div>
-            <div className="mt-14 grid border-y border-[#032532]/15 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mt-14 grid border-y border-[#46077a]/15 sm:grid-cols-2 lg:grid-cols-3">
               {principles.map(([title, detail]) => (
                 <article
                   key={title}
-                  className="border-b border-[#032532]/15 py-7 sm:px-7 sm:nth-[2n+1]:pl-0 lg:nth-[3n+1]:pl-0 lg:nth-last-[1]:border-b-0"
+                  className="border-b border-[#46077a]/15 py-7 sm:px-7 sm:nth-[2n+1]:pl-0 lg:nth-[3n+1]:pl-0 lg:nth-last-[1]:border-b-0"
                 >
                   <Handshake className="h-5 w-5 text-[#e6377a]" />
-                  <h3 className="mt-4 text-lg font-semibold text-[#032532]">{title}</h3>
+                  <h3 className="mt-4 text-lg font-semibold text-[#46077a]">{title}</h3>
                   <p className="mt-2 text-[15px] leading-7 text-[#272127]">{detail}</p>
                 </article>
               ))}
@@ -472,15 +474,15 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#e6377a]">
                 Why Clients Choose to Work With Us
               </p>
-              <h2 className="mt-5 text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#032532] md:text-[42px]">
+              <h2 className="mt-5 font-serif text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#46077a] md:text-[42px]">
                 A partner built for the work after the recommendation.
               </h2>
             </div>
-            <div className="border-t border-[#032532]/15">
+            <div className="border-t border-[#46077a]/15">
               {reasons.map((reason) => (
                 <div
                   key={reason}
-                  className="flex gap-4 border-b border-[#032532]/15 py-5 text-[16px] leading-7 text-[#272127]"
+                  className="flex gap-4 border-b border-[#46077a]/15 py-5 text-[16px] leading-7 text-[#272127]"
                 >
                   <CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-[#e6377a]" />
                   <span>{reason}</span>
@@ -490,24 +492,24 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
           </div>
         </section>
 
-        <section className="bg-[#FBFFF7] py-20 lg:py-28">
+        <section className="bg-[#FFF7F1] py-20 lg:py-28">
           <div className="mx-auto max-w-[900px] px-6">
             <div className="text-center">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#e6377a]">
                 Frequently Asked Questions
               </p>
-              <h2 className="mt-5 text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#032532] md:text-[42px]">
+              <h2 className="mt-5 font-serif text-[32px] font-bold leading-[1.2] tracking-[-0.04em] text-[#46077a] md:text-[42px]">
                 Before we talk.
               </h2>
             </div>
-            <div className="mt-12 border-t border-[#032532]/15">
+            <div className="mt-12 border-t border-[#46077a]/15">
               {faqs.map(([question, answer], index) => {
                 const isOpen = openFaq === index;
                 return (
-                  <div key={question} className="border-b border-[#032532]/15">
+                  <div key={question} className="border-b border-[#46077a]/15">
                     <button
                       onClick={() => setOpenFaq(isOpen ? null : index)}
-                      className="flex w-full items-center justify-between gap-6 py-6 text-left text-[16px] font-semibold text-[#032532] transition hover:text-[#e6377a]"
+                      className="flex w-full items-center justify-between gap-6 py-6 text-left text-[16px] font-semibold text-[#46077a] transition hover:text-[#e6377a]"
                     >
                       <span>{question}</span>
                       <span
@@ -529,7 +531,7 @@ export default function AboutUs({ onNavigate }: AboutUsProps) {
         </section>
 
         <section className="px-6 py-20 lg:py-28">
-          <div className="mx-auto max-w-[1180px] bg-[#e6377a] px-7 py-14 text-center md:px-14 md:py-18">
+          <div className="mx-auto max-w-[1180px] overflow-hidden rounded-[28px] bg-[#46077a] px-7 py-14 text-center shadow-[0_24px_60px_-30px_rgba(70,7,122,0.7)] md:px-14 md:py-18">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/80">
               Let&apos;s talk about what you actually need
             </p>
