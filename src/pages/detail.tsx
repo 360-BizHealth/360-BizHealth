@@ -824,7 +824,7 @@ const quikchexFeatureData = [
   {
     title: "Streamlined Onboarding",
     description: "Optimize the onboarding experience with structured tasks, self-onboarding, and first-day essentials",
-    image: "https://quikchex.in/wp-content/uploads/2025/08/Streamlined-Onboarding.webp",
+    image: "https://images.pexels.com/photos/36765734/pexels-photo-36765734.jpeg",
     imageAlt: "Streamlined Onboarding",
     imageFirst: true,
     bullets: [
@@ -837,7 +837,7 @@ const quikchexFeatureData = [
   {
     title: "Offboarding Workflow",
     description: "Manage exits with a structured workflow, from separation initiation to exit interviews, for a seamless offboarding process",
-    image: "https://quikchex.in/wp-content/uploads/2025/08/Offboarding-Workflow.webp",
+    image: "https://images.pexels.com/photos/4344878/pexels-photo-4344878.jpeg",
     imageAlt: "Offboarding Workflow",
     imageFirst: false,
     bullets: [
@@ -850,7 +850,7 @@ const quikchexFeatureData = [
   {
     title: "Centralized Employee Database",
     description: "Maintain a complete, secure repository of employee information with customizable fields and document storage",
-    image: "https://quikchex.in/wp-content/uploads/2024/11/screely-1732768593425.png",
+    image: "https://images.pexels.com/photos/5483148/pexels-photo-5483148.jpeg",
     imageAlt: "Centralized Employee Database",
     imageFirst: true,
     bullets: [
@@ -863,7 +863,7 @@ const quikchexFeatureData = [
   {
     title: "Confirmation Workflow",
     description: "Automate employee confirmation processes, from assessment to final decision-making, for timely confirmations",
-    image: "https://quikchex.in/wp-content/uploads/2025/08/Confirmation-Workflow.png",
+    image: "https://images.pexels.com/photos/8872195/pexels-photo-8872195.jpeg",
     imageAlt: "Confirmation Workflow",
     imageFirst: false,
     bullets: [
@@ -876,7 +876,7 @@ const quikchexFeatureData = [
   {
     title: "Letter Generation & E-Signing",
     description: "Create, manage, and digitally sign employee letters, reducing paperwork and ensuring secure documentation",
-    image: "https://quikchex.in/wp-content/uploads/2025/08/Letter-Generation-E-Signing.png",
+    image: "https://images.pexels.com/photos/4968573/pexels-photo-4968573.jpeg",
     imageAlt: "Letter Generation and E-Signing",
     imageFirst: true,
     bullets: [
@@ -985,21 +985,20 @@ function QuikchexFooter({ onNavigate }: { onNavigate: (page: string) => void }) 
 
 function QuikchexHrmsPage({ onNavigate }: { onNavigate: (page: string) => void }) {
   const [faqOpen, setFaqOpen] = useState<number | null>(0);
-  const [testimonialIndex, setTestimonialIndex] = useState(0);
-  const testimonial = quikchexTestimonials[testimonialIndex];
 
   return (
     <div className="quikchex-page min-h-screen overflow-x-hidden bg-white text-[#444444]">
       <Header onNavigate={onNavigate} />
       <main>
-        <section className="quikchex-hero">
-          <div className="quikchex-hero-layout">
-            <div className="quikchex-hero-copy flex flex-col justify-center text-left">
-              <h1 className="max-w-[416px] text-4xl font-normal leading-[1.2] text-white md:text-[44px]">All-in-One HR Software Solution for Modern Businesses</h1>
-              <p className="max-w-[480px] pb-10 pt-5 text-base leading-[1.6] text-[#E4E7EB]">Our comprehensive HRMS covers every stage—from onboarding to retirement. It serves as a central repository for all employee data.</p>
-              <button onClick={() => onNavigate("/contact")} className="inline-flex w-fit items-center gap-2 rounded-full bg-[#FF5C35] px-6 py-3.5 text-base text-white transition hover:bg-[#e94e2c]">Book A Demo <ArrowRight className="h-4 w-4" /></button>
+        <section className="bg-[#5D3A6A] pb-24 pt-40 text-white">
+          <div className="relative z-10 mx-auto flex max-w-[1180px] flex-col items-center gap-12 px-6 text-left lg:flex-row">
+            <div className="flex-1 space-y-6">
+              <span className="inline-block rounded-full border border-[#FF5C35]/20 bg-[#FF5C35]/15 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-[#FF5C35]">HRMS & Payroll Suite</span>
+              <h1 className="text-4xl font-normal leading-[1.1] tracking-tight text-white md:text-5xl lg:text-[48px]">All-in-One HRMS Software: Attendance, Payroll, Expenses &amp; Performance</h1>
+              <p className="max-w-xl text-base leading-relaxed text-slate-200 md:text-lg">Streamline your entire employee lifecycle. From recruitment and onboarding to geofenced attendance, automated payroll processing, expense tracking, and performance reviews—all integrated into a single unified cloud dashboard.</p>
+              <button onClick={() => onNavigate("/contact")} className="inline-flex items-center gap-3 rounded-full bg-[#FF5C35] px-8 py-4 text-sm font-bold text-white shadow-lg shadow-[#FF5C35]/20 transition hover:bg-[#FF5C35]/95"><span>Book A Free Consultation</span><span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20"><ArrowRight className="h-3 w-3 text-white" /></span></button>
             </div>
-            <div className="quikchex-hero-art"><img src="https://quikchex.in/wp-content/uploads/2025/01/HR-Software-Collage-3-scaled.webp" alt="Quikchex HR software dashboard" /></div>
+            <div className="w-full max-w-[500px] flex-1 lg:max-w-none">{renderHeroGraphic("/services/hrms", "All-in-One HRMS Software")}</div>
           </div>
         </section>
 
@@ -1035,31 +1034,27 @@ function QuikchexHrmsPage({ onNavigate }: { onNavigate: (page: string) => void }
           </div>
         </section>
 
-        <section className="border-y border-[#7F7F7F2B] py-12">
-          <div className="quikchex-content-width">
-            <div className="quikchex-testimonial-card relative rounded-[24px] px-6 py-10 text-center text-white shadow-[0_6px_12px_-2px_rgba(0,0,0,.04)] md:px-20">
-              <span className="inline-flex rounded-full border border-[#FBFBFD12] bg-[#FBFBFD12] px-4 py-1.5 text-sm text-[#FDA29B]">Testimonials</span>
-              <h2 className="mt-5 text-[28px] font-semibold text-white">Hear from our users</h2>
-              <div className="mt-9 flex items-center justify-between gap-4">
-                <button onClick={() => setTestimonialIndex((testimonialIndex - 1 + quikchexTestimonials.length) % quikchexTestimonials.length)} aria-label="Previous testimonial" className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/20 text-white transition hover:bg-white/10"><ArrowLeft className="h-4 w-4" /></button>
-                <div className="max-w-[790px]">
-                  <p className="text-lg italic leading-[1.6] text-white">“{testimonial.quote}”</p>
-                  <div className="mt-7 flex items-center justify-center gap-3"><img src={testimonial.image} alt={testimonial.name} className="h-12 w-12 rounded-full object-cover" /><div className="text-left"><p className="text-sm font-semibold text-white">{testimonial.name}</p><p className="text-xs text-white/70">{testimonial.role} · {testimonial.company}</p></div></div>
-                </div>
-                <button onClick={() => setTestimonialIndex((testimonialIndex + 1) % quikchexTestimonials.length)} aria-label="Next testimonial" className="grid h-9 w-9 shrink-0 place-items-center rounded-full border border-white/20 text-white transition hover:bg-white/10"><ArrowRight className="h-4 w-4" /></button>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <section id="faq" className="py-20">
           <div className="quikchex-content-width grid gap-12 lg:grid-cols-2">
             <div className="text-left lg:pl-12"><h2 className="max-w-[420px] text-[28px] font-semibold leading-[1.3] text-[#000000]">Frequently asked questions</h2><p className="max-w-[360px] pt-5 text-base leading-[1.6] text-[#444444]">Have any questions? Don’t hesitate to contact us!</p><button onClick={() => onNavigate("/contact")} className="mt-7 rounded-full bg-[#FF5C35] px-6 py-3.5 text-base text-white transition hover:bg-[#e94e2c]">Contact Us</button></div>
             <div className="rounded-xl bg-[#7F7F7F0D] p-4">{quikchexFaqs.map(([question, answer], index) => { const isOpen = faqOpen === index; return <div key={question} className="mb-2.5 rounded-2xl bg-white p-4 last:mb-0"><button onClick={() => setFaqOpen(isOpen ? null : index)} className="flex w-full items-center justify-between gap-4 text-left text-base font-semibold text-[#000000]"><span>{question}</span><span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-[#A0A0AB7A] text-xl font-normal leading-none text-[#A0A0AB]">{isOpen ? "−" : "+"}</span></button>{isOpen && <p className="mt-1.5 pr-5 text-sm leading-[1.6] text-[#444444]">{answer}</p>}</div>; })}</div>
           </div>
         </section>
+
+        <section className="bg-white pb-24">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <div className="relative flex flex-col items-center gap-6 overflow-hidden rounded-[2.5rem] border border-[#E8DDD3] bg-[#FEF4EA] p-10 text-center text-slate-800 shadow-sm md:p-14">
+              <div className="pointer-events-none absolute right-0 top-0 h-80 w-80 translate-x-10 -translate-y-10 rounded-full bg-primary/5 blur-[60px]" />
+              <div className="pointer-events-none absolute -bottom-10 left-1/3 h-96 w-96 rounded-full bg-orange-500/5 blur-[80px]" />
+              <span className="relative rounded-full border border-[#FF5C35]/20 bg-[#FF5C35]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#FF5C35]">Ready to Optimize?</span>
+              <h2 className="relative max-w-2xl text-3xl font-black leading-tight text-slate-900 md:text-4xl">Partner with 360 BizHealth for Error-Free Workflows</h2>
+              <p className="relative max-w-xl text-sm leading-relaxed text-slate-600 md:text-base">Automate calculations, eliminate legal compliance risks, and establish premium employee benefits under a single unified dashboard.</p>
+              <button onClick={() => onNavigate("/contact")} className="relative flex items-center gap-2 rounded-full bg-[#FF5C35] px-8 py-4 text-sm font-bold text-white shadow-md shadow-[#FF5C35]/15 transition hover:bg-[#FF5C35]/95"><span>Book a Demo</span><ArrowRight className="h-4 w-4" /></button>
+            </div>
+          </div>
+        </section>
       </main>
-      <QuikchexFooter onNavigate={onNavigate} />
+      <Footer onNavigate={onNavigate} />
     </div>
   );
 }
