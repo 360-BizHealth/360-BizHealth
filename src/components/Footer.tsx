@@ -52,7 +52,7 @@ export default function Footer({ onNavigate }: FooterProps) {
   ];
 
   const companyLinks = [
-    { title: "About Us", href: "#" },
+    { title: "About Us", href: "/about-us" },
     { title: "Careers", href: "#", badge: "We're Hiring!" },
     { title: "Pricing", href: "/pricing" },
     { title: "Contact Us", href: "/contact" },

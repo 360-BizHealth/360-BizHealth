@@ -95,7 +95,7 @@ export default function Header({ onNavigate }: HeaderProps) {
     {
       title: "About Us",
       key: "about",
-      href: "#",
+      href: "/about-us",
     },
     {
       title: "Contact Us",
