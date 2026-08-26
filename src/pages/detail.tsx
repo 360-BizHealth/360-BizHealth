@@ -37,6 +37,7 @@ import {
   HelpCircle,
   ChevronDown,
   ArrowRight,
+  ArrowLeft,
   Shield,
   Layers,
   Star,
@@ -52,7 +53,7 @@ import {
   Smartphone,
   MapPin,
   CheckCircle2,
-  FileText
+  FileText,
 } from "lucide-react";
 
 interface DetailProps {
@@ -439,10 +440,10 @@ function renderHeroGraphic(currentPath: string, title: string) {
   if (currentPath === "/products/attendance-leave" || currentPath === "/services/hrms") {
     return <LeaveManagementHeroMockup />;
   }
-  if (currentPath === "/services/statutory-compliance") {
+  if (currentPath === "/services/statutory-compliance" || currentPath === "/services/paga") {
     return <LabourComplianceHeroMockup />;
   }
-  if (currentPath === "/products/payroll-salary") {
+  if (currentPath === "/products/payroll-salary" || currentPath === "/services/payroll") {
     return <PayrollOutsourcingHeroMockup />;
   }
   // Default mockup
@@ -460,30 +461,29 @@ function renderHeroGraphic(currentPath: string, title: string) {
   );
 }
 
-const detailPagesData: Record<
-  string,
-  {
-    heroCategory: string;
-    heroHeadline: string;
-    heroSubtitle: string;
-    heroImage: any;
-    trustLogoText: string;
-    introParagraph: string;
-    features: {
-      title: string;
-      desc: string;
-      featureImage: any;
-      bullets: { boldText: string; normalText: string }[];
-    }[];
-    testimonials: {
-      quote: string;
-      author: string;
-      role: string;
-      company: string;
-    };
-    faqs: { q: string; a: string }[];
-  }
-> = {
+interface ServicePageData {
+  heroCategory: string;
+  heroHeadline: string;
+  heroSubtitle: string;
+  heroImage: any;
+  trustLogoText: string;
+  introParagraph: string;
+  features: {
+    title: string;
+    desc: string;
+    featureImage: any;
+    bullets: { boldText: string; normalText: string }[];
+  }[];
+  testimonials: {
+    quote: string;
+    author: string;
+    role: string;
+    company: string;
+  };
+  faqs: { q: string; a: string }[];
+}
+
+const detailPagesData: Record<string, ServicePageData> = {
   "/services/hrms": {
     heroCategory: "HRMS & Payroll Suite",
     heroHeadline: "All-in-One HRMS Software: Attendance, Payroll, Expenses & Performance",
@@ -692,6 +692,76 @@ const detailPagesData: Record<
       { q: "Do you handle local state-level compliance?", a: "Yes, we handle compliance requirements across central and all state-specific notifications." }
     ]
   },
+  "/services/ipr-brand-protection": {
+    heroCategory: "IPR & Brand Protection Services",
+    heroHeadline: "Protect Your Intellectual Property and Build a Stronger Brand",
+    heroSubtitle: "Secure your trademarks, copyrights, and designs with practical legal guidance that protects your ideas and gives your business room to grow.",
+    heroImage: gaugeImg,
+    trustLogoText: "Helping Indian Businesses Protect Their Ideas and Identity",
+    introParagraph: "A strong brand is one of your most valuable business assets. Our IPR advisory helps you identify, register, and protect the intellectual property that sets your business apart, while reducing the risk of disputes and costly rework.",
+    features: [
+      {
+        title: "Trademark Registration & Brand Protection",
+        desc: "Build a defensible brand identity with end-to-end trademark search, filing, and objection support.",
+        featureImage: gaugeImg,
+        bullets: [
+          { boldText: "Trademark Search", normalText: "Check brand availability and identify potential conflicts before filing." },
+          { boldText: "Application Filing", normalText: "Prepare and submit accurate applications for names, logos, and taglines." },
+          { boldText: "Objection Support", normalText: "Respond to examination reports and objections with clear legal documentation." }
+        ]
+      },
+      {
+        title: "Copyright, Design & IP Advisory",
+        desc: "Protect original content, product designs, and creative work with documentation tailored to your business.",
+        featureImage: webSeoImg,
+        bullets: [
+          { boldText: "Copyright Registration", normalText: "Protect software, creative content, brand assets, and original business material." },
+          { boldText: "Design Protection", normalText: "Secure the visual identity and appearance of products before launch." },
+          { boldText: "IP Portfolio Guidance", normalText: "Create a clear renewal and ownership plan for your growing IP portfolio." }
+        ]
+      }
+    ],
+    testimonials: { quote: "The team made our trademark filing process clear and straightforward, from search to submission.", author: "Nitesh Kumar", role: "Founder", company: "ByteWave Technologies" },
+    faqs: [
+      { q: "How long does trademark registration take?", a: "The overall timeline depends on examination and objections, but applications can be prepared and filed promptly once the search is complete." },
+      { q: "Can you protect both our logo and business name?", a: "Yes, we can advise on separate filings for your word mark, logo, tagline, and other protectable brand assets." }
+    ]
+  },
+  "/services/corporate-retreats": {
+    heroCategory: "Corporate Retreats & Workations",
+    heroHeadline: "Bring Your Team Together with Thoughtful Corporate Retreats",
+    heroSubtitle: "Plan memorable offsites, team-building experiences, and workations with one partner managing the details from itinerary to return journey.",
+    heroImage: envelopeImg,
+    trustLogoText: "Creating Better Team Experiences for Growing Businesses",
+    introParagraph: "The right corporate retreat gives teams space to reconnect, collaborate, and return with fresh energy. We design well-organized experiences around your goals, team size, budget, and preferred destination.",
+    features: [
+      {
+        title: "Curated Corporate Offsites",
+        desc: "Turn a team trip into a purposeful experience with a well-planned itinerary, comfortable stays, and activities people enjoy.",
+        featureImage: envelopeImg,
+        bullets: [
+          { boldText: "Destination Planning", normalText: "Shortlist destinations and venues that match your team’s goals and travel window." },
+          { boldText: "End-to-End Itinerary", normalText: "Coordinate travel, stays, meals, meetings, and activities in one clear plan." },
+          { boldText: "Team Experiences", normalText: "Add workshops and activities that encourage collaboration without feeling forced." }
+        ]
+      },
+      {
+        title: "Workations & Team Building",
+        desc: "Blend focused work with restorative experiences that help distributed and growing teams build stronger connections.",
+        featureImage: envelopeImg,
+        bullets: [
+          { boldText: "Flexible Workation Plans", normalText: "Create productive schedules with dependable workspaces and comfortable stays." },
+          { boldText: "Interactive Activities", normalText: "Choose inclusive team-building formats for different interests and energy levels." },
+          { boldText: "On-Ground Coordination", normalText: "Keep every moving part on track with a dedicated coordination partner." }
+        ]
+      }
+    ],
+    testimonials: { quote: "Our retreat was organized beautifully, and the team could focus on the experience instead of logistics.", author: "Aditi Sen", role: "Head of People", company: "Karta Tech Labs" },
+    faqs: [
+      { q: "Can you plan retreats for small and large teams?", a: "Yes, we tailor destinations, stays, activities, and travel plans to your team size and budget." },
+      { q: "Can the retreat include work sessions and team activities?", a: "Yes, the itinerary can balance meetings, workshops, leisure time, and team-building experiences." }
+    ]
+  },
   "/services/company-registration": {
     heroCategory: "Company Registration",
     heroHeadline: "Fast & Professional Company Registration in India",
@@ -751,6 +821,9 @@ const detailPagesData: Record<
     ]
   }
 };
+
+detailPagesData["/services/paga"] = detailPagesData["/services/statutory-compliance"];
+detailPagesData["/services/payroll"] = detailPagesData["/products/payroll-salary"];
 
 interface ToolkitItem {
   title: string;
@@ -819,6 +892,259 @@ const hrToolkitsList: ToolkitItem[] = [
   }
 ];
 
+const quikchexFeatureData = [
+  {
+    title: "Streamlined Onboarding",
+    description: "Optimize the onboarding experience with structured tasks, self-onboarding, and first-day essentials",
+    image: "https://images.pexels.com/photos/36765734/pexels-photo-36765734.jpeg",
+    imageAlt: "Streamlined Onboarding",
+    imageFirst: true,
+    bullets: [
+      ["Task Assignments", "Define tasks to guide new hires and internal team members through each onboarding step"],
+      ["Self-Onboarding", "Empower employees to complete onboarding steps independently"],
+      ["HR Policy Acknowledgement", "Ensure employees review and acknowledge HR policies"],
+      ["Automated Tracking", "Monitor completion of onboarding tasks and onboarding processes through a dashboard"]
+    ]
+  },
+  {
+    title: "Offboarding Workflow",
+    description: "Manage exits with a structured workflow, from separation initiation to exit interviews, for a seamless offboarding process",
+    image: "https://images.pexels.com/photos/4344878/pexels-photo-4344878.jpeg",
+    imageAlt: "Offboarding Workflow",
+    imageFirst: false,
+    bullets: [
+      ["Employee Separation Requests", "Enable employees to initiate separation requests through the ESS portal"],
+      ["Exit Interviews", "Gather insights through structured exit interviews, facilitating organizational improvements"],
+      ["Checklist Management", "Assign tasks to all stakeholders in the exit process for smooth transitions"],
+      ["Attrition Analysis", "Define and identify separation reason for each departing employee"]
+    ]
+  },
+  {
+    title: "Centralized Employee Database",
+    description: "Maintain a complete, secure repository of employee information with customizable fields and document storage",
+    image: "https://images.pexels.com/photos/5483148/pexels-photo-5483148.jpeg",
+    imageAlt: "Centralized Employee Database",
+    imageFirst: true,
+    bullets: [
+      ["Customizable Data Fields", "Capture essential employee details unique to your organization’s needs"],
+      ["Document Management", "Securely store documents, certificates, and other important records"],
+      ["Easy Access & Updates", "Retrieve and update employee information quickly when needed"],
+      ["Data Change Requests", "Empower employees to modify their personal information from their ESS portals"]
+    ]
+  },
+  {
+    title: "Confirmation Workflow",
+    description: "Automate employee confirmation processes, from assessment to final decision-making, for timely confirmations",
+    image: "https://images.pexels.com/photos/8872195/pexels-photo-8872195.jpeg",
+    imageAlt: "Confirmation Workflow",
+    imageFirst: false,
+    bullets: [
+      ["Customizable Milestones", "Define criteria for employee confirmations based on company policies"],
+      ["Confirmation Assessments", "Conduct and record performance assessments for confirmation decisions"],
+      ["Automated Reminders", "Notify managers and HR when probation periods are nearing completion"],
+      ["Efficient Approvals", "Streamline the approval process for faster decision-making"]
+    ]
+  },
+  {
+    title: "Letter Generation & E-Signing",
+    description: "Create, manage, and digitally sign employee letters, reducing paperwork and ensuring secure documentation",
+    image: "https://images.pexels.com/photos/4968573/pexels-photo-4968573.jpeg",
+    imageAlt: "Letter Generation and E-Signing",
+    imageFirst: true,
+    bullets: [
+      ["Customizable Letter Templates", "Generate offer letters, confirmation letters, and more with ease"],
+      ["Digital Signing Options", "Enable employees and managers to sign documents electronically"],
+      ["Centralized Storage", "Keep a record of all generated and signed documents for easy retrieval"]
+    ]
+  }
+];
+
+const quikchexFaqs = [
+  ["Can employees initiate their own separation requests?", "Yes, employees can initiate separation requests directly through their Employee Self-Service (ESS) portal, streamlining the offboarding process and allowing for smoother communication."],
+  ["How does the onboarding workflow help new employees settle in?", "The onboarding workflow includes task assignments, self-onboarding options, first-day induction, and an onboarding survey. It also enables new hires to acknowledge HR policies, ensuring a smooth and compliant start to their employment."],
+  ["Is it possible to customize the employee master database fields?", "Absolutely! The employee master database allows for customizable data fields, making it easy to capture and organize employee details that are specific to your organization’s needs."],
+  ["Can managers track and assess probation completions for employee confirmations?", "Yes, the confirmation workflow includes customizable milestones and an assessment feature, helping managers conduct structured performance assessments to make timely confirmation decisions."],
+  ["Does the system support digital signing for employee letters?", "Yes, our module enables digital generation and signing of documents like offer letters and confirmation letters, with centralized storage for secure and easy access to all signed records."],
+  ["Are exit interviews part of the offboarding workflow?", "Yes, exit interviews are included as part of the offboarding process to capture valuable insights, allowing HR to gather feedback for continuous improvement."],
+  ["Can we manage company-wide and regional policies within the onboarding process?", "Yes, you can assign HR policies within the onboarding workflow, allowing new hires to review and acknowledge relevant company and regional policies during their onboarding process."]
+];
+
+const quikchexTestimonials = [
+  {
+    quote: "The Quikchex HRMS platform has been a valuable addition to our HR processes at IIDE. The employee directory works seamlessly, and the leave process setup is intuitive, helping streamline approvals efficiently. The payroll and attendance management modules have also been reliable and easy, making our HR operations smoother.",
+    name: "Anushka Rajani Jhaveri",
+    role: "Chief Operating Officer",
+    company: "IIDE",
+    image: "https://quikchex.in/wp-content/uploads/2024/08/anushka-rajani-150x150.jpg"
+  },
+  {
+    quote: "The user-friendly Quikchex interface has streamlined our processes, saving valuable time. The payroll and attendance system ensures accurate, timely processing. We are particularly impressed with the Mobile App’s attendance capture, eliminating the need for biometric punching. From employee onboarding to performance management, the platform has significantly improved our efficiency. Grateful for the team’s support.",
+    name: "Bhavna Manchanda",
+    role: "Senior Manager - HR",
+    company: "SEED Global Education",
+    image: "https://quikchex.in/wp-content/uploads/2024/08/bhavna-Seed-Global-1-150x150.jpeg"
+  },
+  {
+    quote: "It’s been over five years since we started using Quikchex software, and it has proven to be incredibly user-friendly and efficient. The platform has consistently made our processes smoother and more streamlined, contributing significantly to our operational ease.",
+    name: "Sneha Gajjar",
+    role: "Human Resource – Business Partner",
+    company: "Equentia Natural Resources",
+    image: "https://quikchex.in/wp-content/uploads/2024/08/1538723131503-150x150.jpg"
+  },
+  {
+    quote: "We have been using Quikchex Payroll and Employee Management Software since 2017. It is very user-friendly, and the support provided by the team on every module, along with the training, is amazing. The GPS-based attendance module has significantly reduced our payroll processing time from 7 days to 1 day. I have recommended this software to many of my HR colleagues.",
+    name: "Vilas Desai",
+    role: "Head – HR",
+    company: "SID Hospitality Pvt Ltd",
+    image: "https://quikchex.in/wp-content/uploads/2024/08/Vilas-Desai-150x150.png"
+  },
+  {
+    quote: "Quikchex provides outstanding support, with a highly knowledgeable and personable team that resolves issues promptly and effectively. Their software handles all payroll and HRMS needs seamlessly, allowing the HR team to focus on innovation. Always just a call away, the Quikchex team handles situations efficiently and positively, making it a brilliant solution backed by an exceptional team.",
+    name: "Mr. Nilesh Chandole",
+    role: "Head HR",
+    company: "Waterways Leisure Tourism Private Limited",
+    image: "https://quikchex.in/wp-content/uploads/2024/08/nilesh-chandole-150x150.png"
+  }
+];
+
+function QuikchexFooter({ onNavigate }: { onNavigate: (page: string) => void }) {
+  const productLinks = ["HR Software", "Payroll Software", "Attendance Management Software", "Leave Management System", "Expense Management Software", "Performance Management Software", "Recruitment Management Software", "Employee Engagement", "Employee Timesheet Software", "Flexi Benefits"];
+  const serviceLinks = ["Payroll Outsourcing", "Labour Compliance Management", "Compliance Audit", "Vendor Audit"];
+  const aboutLinks = ["Company Overview", "Partners", "Trust Center", "Plans", "Contact Us"];
+  const linkTo = (label: string) => label === "Contact Us" ? "/contact" : "#";
+
+  return (
+    <footer className="bg-white pb-8 pt-20 text-[#444444]">
+      <div className="quikchex-content-width">
+        <div className="quikchex-cta-card mb-20 overflow-hidden rounded-[24px] border border-[#7F7F7F2B] px-6 py-20 text-center">
+          <div className="relative z-10 mx-auto max-w-[550px]">
+            <h2 className="mx-auto max-w-[540px] text-4xl font-semibold leading-tight text-white md:text-[56px]">Ready to optimize your HR operations?</h2>
+            <p className="mx-auto mt-5 max-w-[550px] text-base leading-relaxed text-white">Sign up today and join thousands of businesses that trust our solution to manage their HR and payroll needs efficiently.</p>
+            <button onClick={() => onNavigate("/contact")} className="mt-6 inline-flex items-center gap-2.5 rounded-full bg-[#213343] px-6 py-3.5 text-base text-white transition hover:bg-[#172630]">Book a Demo <ArrowRight className="h-4 w-4" /></button>
+          </div>
+        </div>
+
+        <div className="grid gap-12 border-b border-slate-200 pb-14 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-8">
+          <div>
+            <img src="https://quikchex.in/wp-content/uploads/2024/08/Quikchex-logo.png" alt="Quikchex" className="mb-5 h-10 w-auto object-contain object-left" />
+            <h5 className="max-w-[260px] text-base font-normal leading-relaxed text-[#444444]">HRMS, Payroll and Compliance Solutions for India. Modern HR solution for Indian Businesses.</h5>
+            <div className="mt-6 h-px max-w-[260px] bg-slate-200" />
+          </div>
+          <div>
+            <h3 className="mb-5 text-base font-semibold text-[#070707]">Products</h3>
+            <ul className="space-y-3 text-sm">{productLinks.map((link) => <li key={link}><a href="#" className="hover:text-[#FF5C35]">{link}</a></li>)}</ul>
+          </div>
+          <div>
+            <h3 className="mb-5 text-base font-semibold text-[#070707]">Services</h3>
+            <ul className="space-y-3 text-sm">{serviceLinks.map((link) => <li key={link}><a href="#" className="hover:text-[#FF5C35]">{link}</a></li>)}</ul>
+          </div>
+          <div>
+            <h3 className="mb-5 text-base font-semibold text-[#070707]">About Us</h3>
+            <ul className="space-y-3 text-sm">{aboutLinks.map((link) => <li key={link}><a href={linkTo(link)} onClick={link === "Contact Us" ? (event) => { event.preventDefault(); onNavigate("/contact"); } : undefined} className="hover:text-[#FF5C35]">{link}</a></li>)}</ul>
+            <h3 className="mb-5 mt-8 text-base font-semibold text-[#070707]">Resources</h3>
+            <ul className="space-y-3 text-sm"><li><a href="#" className="hover:text-[#FF5C35]">HR Toolkit</a></li><li><a href="#" className="hover:text-[#FF5C35]">Blog</a></li></ul>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-5 pt-6 text-sm md:flex-row md:items-center md:justify-between">
+          <div className="flex flex-wrap gap-x-5 gap-y-2"><span>© Quikchex 2026.</span><span>All Rights Reserved.</span><a href="https://quikchex.in/terms-and-conditions/" className="hover:text-[#FF5C35]">Terms and conditions</a><a href="https://quikchex.in/privacy-policy/" className="hover:text-[#FF5C35]">Privacy policy</a></div>
+          <div className="flex items-center gap-7 text-lg font-semibold text-[#213343]"><a href="https://in.linkedin.com/company/quikchex-private-limited" aria-label="LinkedIn" className="hover:text-[#FF5C35]">in</a><a href="https://x.com/quikchex" aria-label="X" className="hover:text-[#FF5C35]">𝕏</a><a href="https://www.facebook.com/quikchex/" aria-label="Facebook" className="hover:text-[#FF5C35]">f</a></div>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+type StyledFeature = {
+  title: string;
+  description: string;
+  image: any;
+  imageAlt: string;
+  imageFirst: boolean;
+  bullets: [string, string][];
+};
+
+type StyledFaq = { q: string; a: string };
+
+function StyledServicePage({
+  onNavigate,
+  data,
+  features,
+  faqs,
+  visualPath,
+}: {
+  onNavigate: (page: string) => void;
+  data: ServicePageData;
+  features: StyledFeature[];
+  faqs: StyledFaq[];
+  visualPath: string;
+}) {
+  const [faqOpen, setFaqOpen] = useState<number | null>(0);
+
+  return (
+    <div className="quikchex-page min-h-screen overflow-x-hidden bg-white text-[#444444]">
+      <Header onNavigate={onNavigate} />
+      <main>
+        <section className="bg-[#5D3A6A] pb-24 pt-40 text-white">
+          <div className="relative z-10 mx-auto flex max-w-[1180px] flex-col items-center gap-12 px-6 text-left lg:flex-row">
+            <div className="flex-1 space-y-6">
+              <span className="inline-block rounded-full border border-[#FF5C35]/20 bg-[#FF5C35]/15 px-3.5 py-1 text-xs font-bold uppercase tracking-widest text-[#FF5C35]">{data.heroCategory}</span>
+              <h1 className="text-4xl font-normal leading-[1.1] tracking-tight text-white md:text-5xl lg:text-[48px]">{data.heroHeadline}</h1>
+              <p className="max-w-xl text-base leading-relaxed text-slate-200 md:text-lg">{data.heroSubtitle}</p>
+              <button onClick={() => onNavigate("/contact")} className="inline-flex items-center gap-3 rounded-full bg-[#FF5C35] px-8 py-4 text-sm font-bold text-white shadow-lg shadow-[#FF5C35]/20 transition hover:bg-[#FF5C35]/95"><span>Book A Free Consultation</span><span className="flex h-5 w-5 items-center justify-center rounded-full bg-white/20"><ArrowRight className="h-3 w-3 text-white" /></span></button>
+            </div>
+            <div className="w-full max-w-[500px] flex-1 lg:max-w-none">{renderHeroGraphic(visualPath, data.heroHeadline)}</div>
+          </div>
+        </section>
+
+        <section className="pb-12 pt-8 text-center">
+          <div className="quikchex-content-width">
+            <h2 className="mx-auto max-w-[665px] text-[28px] font-semibold leading-[1.3] text-[#000000]">Advanced HR Software Features and Integrations</h2>
+            <p className="mx-auto max-w-[520px] pb-12 pt-4 text-base leading-[1.6] text-[#444444]">HR Software and Talent Management System Integration. Organize and simplify your employee lifecycle through automated workflows</p>
+          </div>
+        </section>
+
+        <section>
+          <div className="quikchex-content-width">
+            {features.map((feature) => (
+              <div key={feature.title} className={`quikchex-feature-row ${feature.imageFirst ? "" : "flex-row-reverse"}`}>
+                <div className="quikchex-feature-visual"><img src={feature.image} alt={feature.imageAlt} /></div>
+                <div className="text-left">
+                  <h2 className="text-[28px] font-semibold leading-[1.3] text-[#000000]">{feature.title}</h2>
+                  <p className="pt-4 text-base leading-[1.6] text-[#444444]">{feature.description}</p>
+                  <ul className="space-y-4 pt-6">{feature.bullets.map(([label, text]) => <li key={label} className="flex items-start gap-3 text-base leading-[1.6] text-[#444444]"><CheckCircle2 className="mt-1 h-5 w-5 shrink-0 text-[#FF5C35]" /><span><strong className="text-[#000000]">{label}:</strong> {text}</span></li>)}</ul>
+                  <button onClick={() => onNavigate("/contact")} className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#213343] px-[18px] py-[13px] text-base text-white transition hover:bg-[#172630]">Learn More <ArrowRight className="h-4 w-4" /></button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="faq" className="py-20">
+          <div className="quikchex-content-width grid gap-12 lg:grid-cols-2">
+            <div className="text-left lg:pl-12"><h2 className="max-w-[420px] text-[28px] font-semibold leading-[1.3] text-[#000000]">Frequently asked questions</h2><p className="max-w-[360px] pt-5 text-base leading-[1.6] text-[#444444]">Have any questions? Don’t hesitate to contact us!</p><button onClick={() => onNavigate("/contact")} className="mt-7 rounded-full bg-[#FF5C35] px-6 py-3.5 text-base text-white transition hover:bg-[#e94e2c]">Contact Us</button></div>
+            <div className="rounded-xl bg-[#7F7F7F0D] p-4">{faqs.map(({ q: question, a: answer }, index) => { const isOpen = faqOpen === index; return <div key={question} className="mb-2.5 rounded-2xl bg-white p-4 last:mb-0"><button onClick={() => setFaqOpen(isOpen ? null : index)} className="flex w-full items-center justify-between gap-4 text-left text-base font-semibold text-[#000000]"><span>{question}</span><span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-[#A0A0AB7A] text-xl font-normal leading-none text-[#A0A0AB]">{isOpen ? "−" : "+"}</span></button>{isOpen && <p className="mt-1.5 pr-5 text-sm leading-[1.6] text-[#444444]">{answer}</p>}</div>; })}</div>
+          </div>
+        </section>
+
+        <section className="bg-white pb-24">
+          <div className="mx-auto max-w-[1180px] px-6">
+            <div className="relative flex flex-col items-center gap-6 overflow-hidden rounded-[2.5rem] border border-[#E8DDD3] bg-[#FEF4EA] p-10 text-center text-slate-800 shadow-sm md:p-14">
+              <div className="pointer-events-none absolute right-0 top-0 h-80 w-80 translate-x-10 -translate-y-10 rounded-full bg-primary/5 blur-[60px]" />
+              <div className="pointer-events-none absolute -bottom-10 left-1/3 h-96 w-96 rounded-full bg-orange-500/5 blur-[80px]" />
+              <span className="relative rounded-full border border-[#FF5C35]/20 bg-[#FF5C35]/10 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#FF5C35]">Ready to Optimize?</span>
+              <h2 className="relative max-w-2xl text-3xl font-black leading-tight text-slate-900 md:text-4xl">Partner with 360 BizHealth for Error-Free Workflows</h2>
+              <p className="relative max-w-xl text-sm leading-relaxed text-slate-600 md:text-base">Automate calculations, eliminate legal compliance risks, and establish premium employee benefits under a single unified dashboard.</p>
+              <button onClick={() => onNavigate("/contact")} className="relative flex items-center gap-2 rounded-full bg-[#FF5C35] px-8 py-4 text-sm font-bold text-white shadow-md shadow-[#FF5C35]/15 transition hover:bg-[#FF5C35]/95"><span>Book a Demo</span><ArrowRight className="h-4 w-4" /></button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer onNavigate={onNavigate} />
+    </div>
+  );
+}
+
 // ----------------- RENDER RESOURCE/TOOLKIT GRID LAYOUT -----------------
 export default function DetailPage({ currentPath, onNavigate }: DetailProps) {
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
@@ -854,6 +1180,32 @@ export default function DetailPage({ currentPath, onNavigate }: DetailProps) {
       }
     ]
   };
+
+  const styledServicePaths = [
+    "/services/hrms",
+    "/products/payroll-salary",
+    "/services/payroll",
+    "/services/statutory-compliance",
+    "/services/paga",
+    "/services/ipr-brand-protection",
+    "/services/corporate-retreats",
+  ];
+
+  if (styledServicePaths.includes(currentPath)) {
+    const styledFeatures: StyledFeature[] = currentPath === "/services/hrms"
+      ? quikchexFeatureData as StyledFeature[]
+      : data.features.map((feature, index) => ({
+          title: feature.title,
+          description: feature.desc,
+          image: feature.featureImage,
+          imageAlt: feature.title,
+          imageFirst: index % 2 === 0,
+          bullets: feature.bullets.map((bullet) => [bullet.boldText, bullet.normalText]),
+        }));
+    const styledFaqs = currentPath === "/services/hrms" ? quikchexFaqs.map(([q, a]) => ({ q, a })) : data.faqs;
+
+    return <StyledServicePage onNavigate={onNavigate} data={data} features={styledFeatures} faqs={styledFaqs} visualPath={currentPath} />;
+  }
 
   // Determine background color of the hero banner based on the route (exact Quikchex colors)
   const getHeroBgColor = (path: string) => {
