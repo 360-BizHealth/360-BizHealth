@@ -1002,15 +1002,6 @@ function QuikchexHrmsPage({ onNavigate }: { onNavigate: (page: string) => void }
           </div>
         </section>
 
-        <section className="py-14 text-center">
-          <div className="quikchex-content-width">
-            <p className="mb-9 text-base text-[#444444]"><strong>Trusted by over 5000+ HR Managers</strong></p>
-            <div className="grid grid-cols-2 items-center gap-8 md:grid-cols-3 lg:grid-cols-6 lg:gap-10">
-              {["https://quikchex.in/wp-content/uploads/2024/09/Acko_General_Insurance_logo.svg.png", "https://quikchex.in/wp-content/uploads/2024/09/Mad-over-donuts.jpg", "https://quikchex.in/wp-content/uploads/2025/02/crossword_logo_small_2d787591-0993-421e-999c-246295b476c4_small.svg", "https://quikchex.in/wp-content/uploads/2026/06/pittie-group-logo.png", "https://quikchex.in/wp-content/uploads/2024/12/coverfox.png", "https://quikchex.in/wp-content/uploads/2024/09/LogiNext_Logo.png"].map((logo) => <div key={logo} className="flex h-10 items-center justify-center"><img className="h-[70px] w-[130px] object-contain" src={logo} alt="Customer logo" /></div>)}
-            </div>
-          </div>
-        </section>
-
         <section className="pb-12 pt-8 text-center">
           <div className="quikchex-content-width">
             <h2 className="mx-auto max-w-[665px] text-[28px] font-semibold leading-[1.3] text-[#000000]">Advanced HR Software Features and Integrations</h2>
