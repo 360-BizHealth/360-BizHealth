@@ -10,8 +10,15 @@ import BlogsNews, { BlogArticle } from './pages/blogs-news'
 import AboutUs from './pages/about-us'
 import './styles.css'
 
+function resolvePage(pathname: string) {
+  const isKnownStaticRoute = pathname === '/' || pathname === '/about-us' || pathname === '/about-us/' || pathname === '/contact' || pathname === '/login' || pathname === '/pricing';
+  const isDynamicDetailRoute = pathname.startsWith('/products/') || pathname.startsWith('/services/') || pathname.startsWith('/resources/') || pathname.startsWith('/about/');
+
+  return isKnownStaticRoute || isDynamicDetailRoute ? pathname : '404';
+}
+
 function App() {
-  const [currentPage, setCurrentPage] = useState<string>('/')
+  const [currentPage, setCurrentPage] = useState<string>(() => resolvePage(window.location.pathname))
 
   const handleNavigate = (page: string) => {
     setCurrentPage(page)
@@ -20,29 +27,10 @@ function App() {
 
   useEffect(() => {
     const handlePopState = () => {
-      const pathname = window.location.pathname
-      const isKnownStaticRoute = pathname === '/' || pathname === '/about-us' || pathname === '/about-us/' || pathname === '/contact' || pathname === '/login' || pathname === '/pricing';
-      const isDynamicDetailRoute = pathname.startsWith('/products/') || pathname.startsWith('/services/') || pathname.startsWith('/resources/') || pathname.startsWith('/about/');
-      
-      if (isKnownStaticRoute || isDynamicDetailRoute) {
-        setCurrentPage(pathname)
-      } else {
-        setCurrentPage('404')
-      }
+      setCurrentPage(resolvePage(window.location.pathname))
     }
 
     window.addEventListener('popstate', handlePopState)
-
-    // Set initial page based on current URL
-    const pathname = window.location.pathname
-    const isKnownStaticRoute = pathname === '/' || pathname === '/about-us' || pathname === '/about-us/' || pathname === '/contact' || pathname === '/login' || pathname === '/pricing';
-    const isDynamicDetailRoute = pathname.startsWith('/products/') || pathname.startsWith('/services/') || pathname.startsWith('/resources/') || pathname.startsWith('/about/');
-    
-    if (isKnownStaticRoute || isDynamicDetailRoute) {
-      setCurrentPage(pathname)
-    } else {
-      setCurrentPage('404')
-    }
 
     return () => window.removeEventListener('popstate', handlePopState)
   }, [])
