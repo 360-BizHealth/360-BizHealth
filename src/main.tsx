@@ -12,16 +12,17 @@ import './styles.css'
 
 function resolvePage(pathname: string) {
   const isKnownStaticRoute = pathname === '/' || pathname === '/about-us' || pathname === '/about-us/' || pathname === '/contact' || pathname === '/login' || pathname === '/pricing';
+  const isRemovedServiceRoute = pathname === '/services/ip-branding' || pathname === '/services/ip-branding/';
   const isDynamicDetailRoute = pathname.startsWith('/products/') || pathname.startsWith('/services/') || pathname.startsWith('/resources/') || pathname.startsWith('/about/');
 
-  return isKnownStaticRoute || isDynamicDetailRoute ? pathname : '404';
+  return isKnownStaticRoute || (isDynamicDetailRoute && !isRemovedServiceRoute) ? pathname : '404';
 }
 
 function App() {
   const [currentPage, setCurrentPage] = useState<string>(() => resolvePage(window.location.pathname))
 
   const handleNavigate = (page: string) => {
-    setCurrentPage(page)
+    setCurrentPage(resolvePage(page))
     window.history.pushState({}, '', page)
   }
 
