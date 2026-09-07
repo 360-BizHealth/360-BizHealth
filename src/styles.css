@@ -193,6 +193,8 @@
     align-items: center;
     gap: 64px;
     margin-block: 50px;
+    content-visibility: auto;
+    contain-intrinsic-size: 580px;
   }
   .quikchex-feature-row > * {
     flex: 1 1 0%;

@@ -1108,7 +1108,7 @@ function StyledServicePage({
           <div className="quikchex-content-width">
             {features.map((feature) => (
               <div key={feature.title} className={`quikchex-feature-row ${feature.imageFirst ? "" : "flex-row-reverse"}`}>
-                <div className="quikchex-feature-visual"><img src={feature.image} alt={feature.imageAlt} /></div>
+                <div className="quikchex-feature-visual"><img src={feature.image} alt={feature.imageAlt} loading="lazy" decoding="async" /></div>
                 <div className="text-left">
                   <h2 className="text-[28px] font-semibold leading-[1.3] text-[#000000]">{feature.title}</h2>
                   <p className="pt-4 text-base leading-[1.6] text-[#444444]">{feature.description}</p>
