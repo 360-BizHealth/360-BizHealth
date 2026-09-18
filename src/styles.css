@@ -36,7 +36,7 @@
   --foreground: #000000;
   --muted: #F6F9FC;
   --muted-foreground: #444444;
-  --primary: #FF5C35;
+  --primary: oklch(0.596 0.239 5.5);
   --primary-foreground: #FFFFFF;
   --secondary: #FB3748;
   --border: #E8DDD3;
@@ -137,7 +137,7 @@
     font-weight: 500;
   }
   .header-nav a:hover {
-    color: #FF5C35;
+    color: var(--primary);
   }
   .feature-card {
     background: #FFFFFF;

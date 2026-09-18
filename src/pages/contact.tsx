@@ -80,7 +80,7 @@ export default function Contact({ onNavigate }: { onNavigate: (page: string) => 
   ];
 
   return (
-    <div className="min-h-screen bg-background text-slate-800 relative overflow-x-hidden">
+    <div className="paz-page min-h-screen bg-background text-slate-800 relative overflow-x-hidden">
       <Header onNavigate={onNavigate} />
 
       {/* Grid Pattern Background */}

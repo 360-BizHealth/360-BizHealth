@@ -16,10 +16,11 @@ if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
 
 function resolvePage(pathname: string) {
   const isKnownStaticRoute = pathname === '/' || pathname === '/about-us' || pathname === '/about-us/' || pathname === '/contact' || pathname === '/login' || pathname === '/pricing';
+  const isBlogRoute = pathname === '/resources/blogs-news' || pathname.startsWith('/resources/blogs-news/');
   const isRemovedServiceRoute = pathname === '/services/ip-branding' || pathname === '/services/ip-branding/';
-  const isDynamicDetailRoute = pathname.startsWith('/products/') || pathname.startsWith('/services/') || pathname.startsWith('/resources/') || pathname.startsWith('/about/');
+  const isDynamicDetailRoute = pathname.startsWith('/products/') || pathname.startsWith('/services/') || pathname.startsWith('/about/');
 
-  return isKnownStaticRoute || (isDynamicDetailRoute && !isRemovedServiceRoute) ? pathname : '404';
+  return isKnownStaticRoute || isBlogRoute || (isDynamicDetailRoute && !isRemovedServiceRoute) ? pathname : '404';
 }
 
 function App() {
@@ -81,7 +82,6 @@ function App() {
 
   const isDynamicRoute = currentPage.startsWith('/products/') || 
                          currentPage.startsWith('/services/') || 
-                         currentPage.startsWith('/resources/') || 
                          currentPage.startsWith('/about/');
 
   return (

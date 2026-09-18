@@ -4,7 +4,7 @@ import logoImg from "@/assets/logo.png";
 
 export default function NotFound({ onNavigate }: { onNavigate: (page: string) => void }) {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="paz-page min-h-screen bg-background">
       <Header onNavigate={onNavigate} />
 
       <main className="mx-auto max-w-7xl px-6 pt-28 pb-24 text-center">

@@ -826,73 +826,6 @@ const detailPagesData: Record<string, ServicePageData> = {
 detailPagesData["/services/paga"] = detailPagesData["/services/statutory-compliance"];
 detailPagesData["/services/payroll"] = detailPagesData["/products/payroll-salary"];
 
-interface ToolkitItem {
-  title: string;
-  desc: string;
-  category: "Template" | "Calculator" | "Checklist" | "Guide";
-  colorClass: string;
-  btnColor: string;
-}
-
-const hrToolkitsList: ToolkitItem[] = [
-  {
-    title: "Gratuity Payout Calculator",
-    desc: "Calculate statutory gratuity payouts based on salary components and years of service under the Payment of Gratuity Act 1972.",
-    category: "Calculator",
-    colorClass: "bg-blue-50 text-blue-600 border-blue-100",
-    btnColor: "bg-blue-600 hover:bg-blue-700"
-  },
-  {
-    title: "EPF & Pension Compounding Tool",
-    desc: "Estimate employee and employer EPF contributions and calculate compound interest accumulations for retirement planning.",
-    category: "Calculator",
-    colorClass: "bg-blue-50 text-blue-600 border-blue-100",
-    btnColor: "bg-blue-600 hover:bg-blue-700"
-  },
-  {
-    title: "HRA Exemption Tax Planner",
-    desc: "Evaluate HRA tax-exempt limits by inputting basic salary, HRA received, and actual rent paid under Section 10(13A).",
-    category: "Calculator",
-    colorClass: "bg-blue-50 text-blue-600 border-blue-100",
-    btnColor: "bg-blue-600 hover:bg-blue-700"
-  },
-  {
-    title: "Standard Employment Offer Letter",
-    desc: "Download customizable offer letter templates containing probation, confidentiality, and compensation clauses.",
-    category: "Template",
-    colorClass: "bg-purple-50 text-purple-600 border-purple-100",
-    btnColor: "bg-purple-600 hover:bg-purple-700"
-  },
-  {
-    title: "Employee Non-Disclosure Agreement (NDA)",
-    desc: "Secure intellectual property and trade secrets with standard legally vetted confidentiality agreement drafts.",
-    category: "Template",
-    colorClass: "bg-purple-50 text-purple-600 border-purple-100",
-    btnColor: "bg-purple-600 hover:bg-purple-700"
-  },
-  {
-    title: "Monthly Payroll Compliance Check-sheet",
-    desc: "Audit monthly deadlines for PF deposits, ESIC contributions, Professional Tax filings, and quarterly TDS returns.",
-    category: "Checklist",
-    colorClass: "bg-emerald-50 text-emerald-600 border-emerald-100",
-    btnColor: "bg-emerald-600 hover:bg-emerald-700"
-  },
-  {
-    title: "Statutory Labor Audit Register",
-    desc: "Keep records aligned for inspector checks. Track contractor lists, overtime registers, and child labor declarations.",
-    category: "Checklist",
-    colorClass: "bg-emerald-50 text-emerald-600 border-emerald-100",
-    btnColor: "bg-emerald-600 hover:bg-emerald-700"
-  },
-  {
-    title: "Startup India Tax Exemption Guide",
-    desc: "Vetted step-by-step guidebook to registering with DPIIT and claiming section 80-IAC tax holidays for startups.",
-    category: "Guide",
-    colorClass: "bg-amber-50 text-amber-600 border-amber-100",
-    btnColor: "bg-amber-600 hover:bg-amber-700"
-  }
-];
-
 const quikchexFeatureData = [
   {
     title: "Streamlined Onboarding",
@@ -1036,7 +969,7 @@ function StyledServicePage({
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <div className="quikchex-page min-h-screen overflow-x-hidden bg-white text-[#444444]">
+    <div className="paz-page quikchex-page min-h-screen overflow-x-hidden bg-white text-[#444444]">
       <Header onNavigate={onNavigate} />
       <main>
         <section className="bg-[#5D3A6A] pb-24 pt-40 text-white">
@@ -1100,21 +1033,14 @@ function StyledServicePage({
   );
 }
 
-// ----------------- RENDER RESOURCE/TOOLKIT GRID LAYOUT -----------------
+// ----------------- RENDER DETAIL PAGE -----------------
 export default function DetailPage({ currentPath, onNavigate }: DetailProps) {
   const [faqOpen, setFaqOpen] = useState<number | null>(null);
-  const [toolkitFilter, setToolkitFilter] = useState<string>("All");
   const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [currentPath]);
-
-  // Determine if it is a toolkit/resources page
-  const isToolkitPage =
-    currentPath.startsWith("/resources/") ||
-    currentPath.includes("careers") ||
-    currentPath.includes("about");
 
   // Fetch Page Data OR Fallback
   const fallbackKey = "/products/attendance-leave";
@@ -1175,149 +1101,9 @@ export default function DetailPage({ currentPath, onNavigate }: DetailProps) {
     return "bg-[#4D4C49]"; // Warm charcoal
   };
 
-  const getToolkitCardClasses = (category: string) => {
-    if (category === "Calculator") {
-      return {
-        cardBg: "bg-[#EDF5FF] border-[#DCE9FF] hover:border-[#1E70E8]/40 hover:shadow-xl hover:shadow-[#1E70E8]/5",
-        iconBg: "bg-white text-[#1E70E8] shadow-sm border border-slate-100/50",
-        badge: "text-[#1E70E8] border-[#B8D7FF] bg-white",
-        button: "bg-[#1E70E8] hover:bg-[#155EC2] shadow-sm shadow-[#1E70E8]/10"
-      };
-    }
-    if (category === "Template") {
-      return {
-        cardBg: "bg-[#F6EEFF] border-[#EAD3FF] hover:border-[#843AE8]/40 hover:shadow-xl hover:shadow-[#843AE8]/5",
-        iconBg: "bg-white text-[#843AE8] shadow-sm border border-slate-100/50",
-        badge: "text-[#843AE8] border-[#D1ADFF] bg-white",
-        button: "bg-[#843AE8] hover:bg-[#6A28C7] shadow-sm shadow-[#843AE8]/10"
-      };
-    }
-    if (category === "Checklist") {
-      return {
-        cardBg: "bg-[#EEFBF3] border-[#D2F5DF] hover:border-[#17A55A]/40 hover:shadow-xl hover:shadow-[#17A55A]/5",
-        iconBg: "bg-white text-[#17A55A] shadow-sm border border-slate-100/50",
-        badge: "text-[#17A55A] border-[#A8ECBE] bg-white",
-        button: "bg-[#17A55A] hover:bg-[#0F8444] shadow-sm shadow-[#17A55A]/10"
-      };
-    }
-    // Guide
-    return {
-      cardBg: "bg-[#FFF6EC] border-[#FFE8CC] hover:border-[#D88A1F]/40 hover:shadow-xl hover:shadow-[#D88A1F]/5",
-      iconBg: "bg-white text-[#D88A1F] shadow-sm border border-slate-100/50",
-      badge: "text-[#D88A1F] border-[#FFD4A3] bg-white",
-      button: "bg-[#D88A1F] hover:bg-[#BF7314] shadow-sm shadow-[#D88A1F]/10"
-    };
-  };
-
-  const filteredToolkits =
-    toolkitFilter === "All"
-      ? hrToolkitsList
-      : hrToolkitsList.filter((item) => item.category === toolkitFilter);
-
-  // ----------------- RENDER RESOURCE/TOOLKIT GRID LAYOUT -----------------
-  if (isToolkitPage) {
-    return (
-      <div className="min-h-screen bg-slate-50 text-slate-800 relative overflow-x-hidden">
-        <Header onNavigate={onNavigate} />
-
-        <main className="mx-auto max-w-[1180px] px-6 pt-32 pb-14 text-left relative z-10">
-          
-          {/* Header Description */}
-          <div className="max-w-3xl mb-8">
-            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#FF5C35] bg-[#FF5C35]/15 border border-[#FF5C35]/20 px-3 py-1 rounded-full mb-3">
-              HR Tools & Resources
-            </span>
-            <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 md:text-4xl leading-tight mb-3 animate-fade-in">
-              Tools, Calculators & Legal Templates for Daily Operations
-            </h1>
-            <p className="text-sm text-slate-500 md:text-base leading-relaxed">
-              Verify computations, draft legally vetted employee contracts, and stay compliant with central labor guidelines using our curated calculators and toolkit downloads.
-            </p>
-          </div>
-
-          {/* Filter Bar */}
-          <div className="flex flex-wrap items-center gap-2 border-b border-slate-200 pb-4 mb-8">
-            {["All", "Calculator", "Template", "Checklist", "Guide"].map((filter) => (
-              <button
-                key={filter}
-                onClick={() => setToolkitFilter(filter)}
-                className={`px-4.5 py-2 rounded-full text-xs font-bold transition-all cursor-pointer ${
-                  toolkitFilter === filter
-                    ? "bg-slate-900 text-white shadow-md shadow-slate-950/15"
-                    : "bg-white border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-slate-300"
-                }`}
-              >
-                {filter}s
-              </button>
-            ))}
-          </div>
-
-          {/* Toolkit Grid */}
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-14">
-            {filteredToolkits.map((item, idx) => {
-              const styles = getToolkitCardClasses(item.category);
-              return (
-                <div
-                  key={idx}
-                  className={`border rounded-[28px] p-6 shadow-sm transition-all duration-300 flex flex-col justify-between text-center relative group ${styles.cardBg}`}
-                >
-                  {/* Visual Icon block */}
-                  <div className={`mx-auto w-14 h-14 rounded-[18px] flex items-center justify-center mb-4 relative group-hover:scale-105 transition-transform duration-300 ${styles.iconBg}`}>
-                    {item.category === "Calculator" && <Calculator className="w-6.5 h-6.5 stroke-[1.8]" />}
-                    {item.category === "Template" && <FileText className="w-6.5 h-6.5 stroke-[1.8]" />}
-                    {item.category === "Checklist" && <CheckSquare className="w-6.5 h-6.5 stroke-[1.8]" />}
-                    {item.category === "Guide" && <BookOpen className="w-6.5 h-6.5 stroke-[1.8]" />}
-                  </div>
-
-                  <div className="flex-1 flex flex-col justify-start">
-                    <span className={`w-fit mx-auto text-[9px] font-extrabold uppercase px-3 py-0.5 rounded-full border mb-3 ${styles.badge}`}>
-                      {item.category}
-                    </span>
-                    <h3 className="font-black text-slate-900 text-sm md:text-base mb-2 leading-tight">
-                      {item.title}
-                    </h3>
-                    <p className="text-xs text-slate-500 leading-relaxed mb-4">
-                      {item.desc}
-                    </p>
-                  </div>
-                  <div>
-                    <div className="h-px bg-slate-900/5 mb-4" />
-                    <button
-                      onClick={() => onNavigate("/contact")}
-                      className={`w-full py-3 rounded-full text-white font-bold text-xs transition active:scale-98 cursor-pointer ${styles.button}`}
-                    >
-                      Access Tool Now
-                    </button>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Bottom Banner */}
-          <div className="relative rounded-[2rem] p-8 md:p-10 text-center overflow-hidden bg-[#FEF4EA] border border-[#E8DDD3] text-slate-800 shadow-sm flex flex-col items-center gap-4">
-            <h3 className="text-xl font-black text-slate-900">Need Custom Tools or Payroll Reconciliations?</h3>
-            <p className="text-slate-600 text-xs max-w-xl leading-relaxed">
-              We provide enterprise integrations, customized tax-saver calculators, and dedicated compliance audits for companies with 150+ staff.
-            </p>
-            <button
-              onClick={() => onNavigate("/contact")}
-              className="flex items-center gap-2 px-6 py-3 rounded-full bg-[#FF5C35] text-white font-bold hover:bg-[#FF5C35]/95 transition active:scale-95 text-xs cursor-pointer"
-            >
-              <span>Speak to Compensation Experts</span>
-              <ArrowRight className="w-3 h-3" />
-            </button>
-          </div>
-
-        </main>
-        <Footer onNavigate={onNavigate} />
-      </div>
-    );
-  }
-
   // ----------------- RENDER STANDARD DENSE SERVICE/PRODUCT LAYOUT -----------------
   return (
-    <div className="min-h-screen bg-white text-slate-800 relative overflow-x-hidden">
+    <div className="paz-page min-h-screen bg-white text-slate-800 relative overflow-x-hidden">
       <Header onNavigate={onNavigate} />
 
       {/* ----------------- DENSE SPLIT HERO (Unique Background colors) ----------------- */}

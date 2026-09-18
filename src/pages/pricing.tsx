@@ -91,7 +91,7 @@ export default function PricingPage({ onNavigate }: PricingProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FFFBF8] text-slate-800 relative overflow-x-hidden">
+    <div className="paz-page min-h-screen bg-[#FFFBF8] text-slate-800 relative overflow-x-hidden">
       <Header onNavigate={onNavigate} />
 
       {/* Grid Pattern Background */}

@@ -49,7 +49,7 @@ export default function Login({ onNavigate }: { onNavigate: (page: string) => vo
   };
 
   return (
-    <div className="min-h-screen bg-white text-slate-800 flex relative overflow-hidden w-full">
+    <div className="paz-page min-h-screen bg-white text-slate-800 flex relative overflow-hidden w-full">
       
       {/* Back to Home button (floating at top-left, clean white capsule button) */}
       <button
