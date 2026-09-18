@@ -151,8 +151,8 @@ export function Footer({ onNavigate }: FooterProps) {
             <div className="space-y-2 text-sm font-semibold text-[#1F0436] pt-1">
               <div className="flex items-center gap-2.5">
                 <Mail className="size-4 text-[#E21B3C] shrink-0" />
-                <a href="mailto:support@360bizhealth.com" className="hover:text-[#E21B3C] transition-colors">
-                  support@360bizhealth.com
+                <a href="mailto:contact@360bizhealth.com" className="hover:text-[#E21B3C] transition-colors">
+                  contact@360bizhealth.com
                 </a>
               </div>
               {/* <div className="flex items-center gap-2.5">
