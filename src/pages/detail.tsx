@@ -969,7 +969,7 @@ function StyledServicePage({
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <div className="paz-page quikchex-page min-h-screen overflow-x-hidden bg-white text-[#444444]">
+    <div className="quikchex-page min-h-screen overflow-x-hidden bg-white text-[#444444]">
       <Header onNavigate={onNavigate} />
       <main>
         <section className="bg-[#5D3A6A] pb-24 pt-40 text-white">
@@ -1103,7 +1103,7 @@ export default function DetailPage({ currentPath, onNavigate }: DetailProps) {
 
   // ----------------- RENDER STANDARD DENSE SERVICE/PRODUCT LAYOUT -----------------
   return (
-    <div className="paz-page min-h-screen bg-white text-slate-800 relative overflow-x-hidden">
+    <div className="min-h-screen bg-white text-slate-800 relative overflow-x-hidden">
       <Header onNavigate={onNavigate} />
 
       {/* ----------------- DENSE SPLIT HERO (Unique Background colors) ----------------- */}

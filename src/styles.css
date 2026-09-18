@@ -22,8 +22,8 @@
   --color-ink-foreground: var(--ink-foreground);
   --color-ink-soft: var(--ink-soft);
   --color-surface-soft: var(--surface-soft);
-  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1rem;
