@@ -4,7 +4,7 @@ import PageHead from "../components/PageHead.jsx";
 import Reveal from "../components/Reveal.jsx";
 import Section, { Eyebrow } from "../components/Section.jsx";
 import ContactForm from "../components/ContactForm.jsx";
-import { WhatsAppLink, EmailLink, PhoneLink } from "../components/ContactLinks.jsx";
+import { EmailLink } from "../components/ContactLinks.jsx";
 import { TileGrid } from "../components/Tiles.jsx";
 
 function RailItem({ color, title, note }) {
@@ -30,9 +30,7 @@ export default function Contact() {
             <Eyebrow>Direct</Eyebrow>
             <h2 style={{ fontSize: "1.5rem" }}>Reach us your way</h2>
             <div className="rail" style={{ marginTop: "1rem" }}>
-              <WhatsAppLink><RailItem color="var(--teal)" title="WhatsApp" note="Fastest for a quick question" /></WhatsAppLink>
               <EmailLink><RailItem color="var(--gold)" title={BIZ.email} note="For detailed requirements and documents" /></EmailLink>
-              <PhoneLink><RailItem color="var(--red)" title={BIZ.phoneDisplay} note="Monday to Saturday, business hours IST" /></PhoneLink>
             </div>
             <p className="muted" style={{ marginTop: "1.2rem", fontSize: ".94rem" }}>Based in {BIZ.area}. We work with businesses across India, and payroll and compliance scope is confirmed state by state.</p>
             <p className="muted" style={{ fontSize: ".94rem" }}>Useful to include: headcount, states of operation, what you use today and your timeline.</p>
