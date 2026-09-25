@@ -7,7 +7,7 @@ export const BIZ = {
   "phoneDisplay": "+91 00000 00000",
   "phoneHref": "+910000000000",
   "whatsapp": "910000000000",
-  "email": "hello@360bizhealth.com",
+  "email": "contact@360bizhealth.com",
   "area": "New Delhi / Delhi NCR, India",
   "addressPublished": false,
   "address": {
