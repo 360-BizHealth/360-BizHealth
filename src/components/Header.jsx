@@ -1,7 +1,7 @@
 import { forwardRef } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { NAV } from "../data/site.js";
-import BrandMark from "./BrandMark.jsx";
+import logo from "../assets/logo.png";
 import Button from "./Button.jsx";
 
 /* Sticky site header. NavLink sets aria-current="page" on the active route,
@@ -10,9 +10,8 @@ const Header = forwardRef(function Header({ menuOpen, onOpenMenu }, burgerRef) {
   return (
     <header className="hdr">
       <div className="wrap hdr__in">
-        <Link className="brand" to="/">
-          <BrandMark />
-          360 Biz Health
+        <Link className="brand" to="/" aria-label="360 Biz Health">
+          <img src={logo} alt="360 Biz Health" className="brand__logo" />
         </Link>
         <nav className="nav" aria-label="Primary">
           {NAV.map((n) => <NavLink key={n.to} to={n.to} end>{n.label}</NavLink>)}

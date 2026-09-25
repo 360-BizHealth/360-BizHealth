@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { BIZ } from "../data/site.js";
 import { SERVICES, SERVICE_SLUGS } from "../data/services.js";
-import { WhatsAppLink, EmailLink, PhoneLink } from "./ContactLinks.jsx";
+import { EmailLink } from "./ContactLinks.jsx";
+import logo from "../assets/logo.png";
 
 /* Footer service labels are the long-form names used in the original footer. */
 const FOOTER_SERVICE_LABELS = {
@@ -17,7 +18,9 @@ export default function Footer() {
       <div className="wrap">
         <div className="ftr__grid">
           <div>
-            <div className="brand">360 Biz Health</div>
+            <div className="brand">
+              <img src={logo} alt="360 Biz Health" className="brand__logo brand__logo--ftr" />
+            </div>
             <p>A multi-service business solutions company. We help businesses handle HR technology, payroll, compliance, business setup and corporate experiences through one coordinated point of contact, working with specialist technology and service partners.</p>
           </div>
           <div>

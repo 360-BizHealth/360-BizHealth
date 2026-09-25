@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { NAV } from "../data/site.js";
+import logo from "../assets/logo.png";
 import Button from "./Button.jsx";
 
 const LINKS = [{ label: "Home", to: "/" }, ...NAV, { label: "FAQ", to: "/faq" }];
@@ -23,7 +24,9 @@ export default function MobileNav({ open, onClose }) {
   return (
     <div className="mnav" id="mobilenav" data-open={open ? "true" : "false"} role="dialog" aria-modal="true" aria-label="Menu" onClick={onClickInside}>
       <div className="mnav__top">
-        <span className="brand" style={{ color: "#fff" }}>360 Biz Health</span>
+        <span className="brand">
+          <img src={logo} alt="360 Biz Health" className="brand__logo brand__logo--ftr" />
+        </span>
         <button className="mnav__close" type="button" aria-label="Close menu" onClick={() => onClose()}>&times;</button>
       </div>
       <nav aria-label="Mobile" className="mnav__links">

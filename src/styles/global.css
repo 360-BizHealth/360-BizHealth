@@ -54,6 +54,8 @@ hr{border:0;border-top:1px solid var(--line-2);margin:0}
 .hdr__in{display:flex;align-items:center;gap:1.2rem;height:72px}
 .brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:var(--serif);font-size:1.22rem;font-weight:600;letter-spacing:-.01em;flex:none}
 .brand svg{flex:none}
+.brand__logo{height:46px;width:auto;display:block;object-fit:contain}
+.brand__logo--ftr{height:42px;background:#ffffff;padding:4px 10px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,.15)}
 .nav{display:flex;align-items:center;gap:.15rem;margin-left:auto}
 .nav a{text-decoration:none;font-size:.95rem;font-weight:500;padding:.5rem .68rem;border-radius:8px;color:var(--ink-2);white-space:nowrap}
 .nav a:hover{background:rgba(15,23,42,.05)}
@@ -223,6 +225,7 @@ hr{border:0;border-top:1px solid var(--line-2);margin:0}
   .nav a{padding:.5rem .5rem;font-size:.9rem}
 }
 @media (max-width:920px){
+  .brand__logo{height:38px}
   .nav,.hdr__cta{display:none}
   .burger{display:flex}
   .hero__in{grid-template-columns:1fr}
