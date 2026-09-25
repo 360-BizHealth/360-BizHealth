@@ -40,9 +40,7 @@ export default function Footer() {
           <div>
             <h4>Get in touch</h4>
             <ul>
-              <li><WhatsAppLink>WhatsApp</WhatsAppLink></li>
               <li><EmailLink>Email us</EmailLink></li>
-              <li><PhoneLink>Call us</PhoneLink></li>
               <li>{BIZ.area}</li>
             </ul>
           </div>

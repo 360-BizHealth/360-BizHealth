@@ -6,7 +6,6 @@ export default function MobileBar() {
   return (
     <div className="mbar">
       <PhoneLink className="btn btn--ghost">Call</PhoneLink>
-      <Button variant="ghost" whatsapp>WhatsApp</Button>
       <Button variant="primary" to="/contact">Enquire</Button>
     </div>
   );

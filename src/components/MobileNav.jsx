@@ -32,7 +32,6 @@ export default function MobileNav({ open, onClose }) {
         ))}
       </nav>
       <Button variant="primary" to="/contact">Talk to an expert</Button>
-      <Button variant="onink" whatsapp>WhatsApp us</Button>
     </div>
   );
 }

@@ -18,7 +18,6 @@ const Header = forwardRef(function Header({ menuOpen, onOpenMenu }, burgerRef) {
           {NAV.map((n) => <NavLink key={n.to} to={n.to} end>{n.label}</NavLink>)}
         </nav>
         <div className="hdr__cta">
-          <Button variant="ghost" size="sm" whatsapp>WhatsApp us</Button>
           <Button variant="primary" size="sm" to="/contact">Talk to an expert</Button>
         </div>
         <button
