@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root{
   --ink:#0F172A; --ink-2:#1B2540; --ink-soft:#475069;
   --paper:#F4F7FF; --white:#FFFFFF;
@@ -68,7 +70,8 @@ hr{border:0;border-top:1px solid var(--line-2);margin:0}
 .nav-dropdown__btn.is-active{color:var(--ink);box-shadow:inset 0 -2px 0 var(--gold)}
 .nav-dropdown__chevron{transition:transform .2s ease;opacity:.7}
 .nav-dropdown.is-open .nav-dropdown__chevron{transform:rotate(180deg)}
-.nav-dropdown__menu{position:absolute;top:calc(100% + 8px);left:-20px;min-width:320px;background:#ffffff;border:1px solid var(--line-2);border-radius:14px;box-shadow:0 16px 36px -4px rgba(15,23,42,.12),0 4px 12px -2px rgba(15,23,42,.06);padding:.55rem;display:none;flex-direction:column;gap:.25rem;z-index:200;animation:navDropFadeIn .18s cubic-bezier(.16,1,.3,1)}
+.nav-dropdown__menu{position:absolute;top:calc(100% + 6px);left:0;min-width:320px;background:#ffffff;border:1px solid var(--line-2);border-radius:14px;box-shadow:0 16px 36px -4px rgba(15,23,42,.14),0 4px 12px -2px rgba(15,23,42,.06);padding:.55rem;display:none;flex-direction:column;gap:.25rem;z-index:200;animation:navDropFadeIn .18s cubic-bezier(.16,1,.3,1)}
+.nav-dropdown__menu::before{content:"";position:absolute;top:-10px;left:0;right:0;height:12px;background:transparent}
 .nav-dropdown.is-open .nav-dropdown__menu{display:flex}
 @keyframes navDropFadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 .nav-dropdown__item{display:flex;align-items:flex-start;gap:.75rem;padding:.65rem .8rem;border-radius:10px;text-decoration:none;color:var(--ink);transition:background .15s ease}

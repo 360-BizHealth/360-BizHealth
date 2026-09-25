@@ -96,7 +96,11 @@ const Header = forwardRef(function Header({ menuOpen, onOpenMenu }, burgerRef) {
               </svg>
             </button>
 
-            <div className="nav-dropdown__menu" role="menu">
+            <div
+              className="nav-dropdown__menu"
+              role="menu"
+              onClick={(e) => e.stopPropagation()}
+            >
               {SERVICES_LIST.map((s) => (
                 <NavLink
                   key={s.to}
@@ -115,8 +119,11 @@ const Header = forwardRef(function Header({ menuOpen, onOpenMenu }, burgerRef) {
             </div>
           </div>
 
+          <NavLink to="/about" end>About</NavLink>
           <NavLink to="/blog" end>Blog</NavLink>
           <NavLink to="/careers" end>Careers</NavLink>
+          <NavLink to="/resources" end>Resources</NavLink>
+          <NavLink to="/contact" end>Contact</NavLink>
         </nav>
         <div className="hdr__cta">
           <Button variant="primary" size="sm" to="/contact">Talk to an expert</Button>
