@@ -15,7 +15,6 @@ export default function ServicePage({ slug }) {
     <>
       <PageHead crumbs={[["Services"], [s.nav]]} title={s.h1} lede={s.kicker}>
         <Button variant="primary" to="/contact" ev="service_page_cta">Talk to an expert</Button>
-        <Button variant="onink" whatsapp msg={`Hi 360 Biz Health, I have a requirement regarding ${s.nav}.`}>WhatsApp us</Button>
       </PageHead>
 
       <Section tight>
