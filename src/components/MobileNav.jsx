@@ -1,14 +1,27 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
-import { NAV } from "../data/site.js";
 import logo from "../assets/logo.png";
 import Button from "./Button.jsx";
 
-const LINKS = [{ label: "Home", to: "/" }, ...NAV, { label: "FAQ", to: "/faq" }];
+const SERVICES_LIST = [
+  { to: "/hrms-software-solutions", label: "HRMS software solutions" },
+  { to: "/payroll-tds-labour-compliance", label: "Payroll & labour compliance" },
+  { to: "/business-registration-ipr-certifications", label: "Business setup & IPR" },
+  { to: "/corporate-retreats-workations", label: "Corporate retreats & workations" },
+];
+
+const OTHER_LINKS = [
+  { label: "Blog", to: "/blog" },
+  { label: "Careers", to: "/careers" },
+  { label: "About", to: "/about" },
+  { label: "Contact", to: "/contact" },
+  { label: "FAQ", to: "/faq" },
+];
 
 /* Full-screen menu for narrow screens. Closes on link click, the close button or Escape. */
 export default function MobileNav({ open, onClose }) {
   const firstLink = useRef(null);
+  const [servicesOpen, setServicesOpen] = useState(true);
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
@@ -30,8 +43,28 @@ export default function MobileNav({ open, onClose }) {
         <button className="mnav__close" type="button" aria-label="Close menu" onClick={() => onClose()}>&times;</button>
       </div>
       <nav aria-label="Mobile" className="mnav__links">
-        {LINKS.map((n, i) => (
-          <NavLink key={n.to} to={n.to} end ref={i === 0 ? firstLink : undefined}>{n.label}</NavLink>
+        <NavLink to="/" end ref={firstLink}>Home</NavLink>
+        
+        <div className="mnav__services-group">
+          <button
+            type="button"
+            className="mnav__services-toggle"
+            onClick={() => setServicesOpen(!servicesOpen)}
+          >
+            <span>Services</span>
+            <span style={{ fontSize: ".85rem", transform: servicesOpen ? "rotate(180deg)" : "none", transition: "transform .2s ease" }}>▼</span>
+          </button>
+          {servicesOpen && (
+            <div className="mnav__sublinks">
+              {SERVICES_LIST.map((s) => (
+                <NavLink key={s.to} to={s.to} end>{s.label}</NavLink>
+              ))}
+            </div>
+          )}
+        </div>
+
+        {OTHER_LINKS.map((n) => (
+          <NavLink key={n.to} to={n.to} end>{n.label}</NavLink>
         ))}
       </nav>
       <Button variant="primary" to="/contact">Talk to an expert</Button>

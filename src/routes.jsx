@@ -3,6 +3,8 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Contact from "./pages/Contact.jsx";
 import Resources from "./pages/Resources.jsx";
+import Blog from "./pages/Blog.jsx";
+import Careers from "./pages/Careers.jsx";
 import Faq from "./pages/Faq.jsx";
 import ThankYou from "./pages/ThankYou.jsx";
 import Privacy from "./pages/Privacy.jsx";
@@ -20,6 +22,10 @@ export const ROUTES = [
     desc: "360 Biz Health is a multi-service business solutions company coordinating HR technology, payroll, compliance, business setup and corporate experiences through one point of contact.", crumbs: [["About us", "/about"]] },
   { path: "/contact", element: <Contact />, title: "Contact 360 Biz Health | HRMS, Payroll & Business Services",
     desc: "Talk to 360 Biz Health about HRMS selection, payroll outsourcing, statutory compliance, business registration, trademark and ISO support, or a corporate retreat.", crumbs: [["Contact", "/contact"]] },
+  { path: "/blog", element: <Blog />, title: "Blog & Practical Guides | 360 Biz Health",
+    desc: "Practical frameworks, articles and operational guides on HRMS, payroll compliance, business setup and corporate offsites.", crumbs: [["Blog", "/blog"]] },
+  { path: "/careers", element: <Careers />, title: "Careers at 360 Biz Health | Join Our Team",
+    desc: "Explore job opportunities at 360 Biz Health across HR technology, payroll operations, client advisory and corporate experiences.", crumbs: [["Careers", "/careers"]] },
   { path: "/resources", element: <Resources />, title: "Resources | Practical Notes on HR, Payroll & Compliance | 360 Biz Health",
     desc: "Short practical notes on choosing an HRMS, running a payroll calendar, operating across states, trademark basics and planning a workation.", crumbs: [["Resources", "/resources"]] },
   { path: "/faq", element: <Faq />, title: "FAQ | HRMS, Payroll, Compliance, Setup & Retreats | 360 Biz Health",
