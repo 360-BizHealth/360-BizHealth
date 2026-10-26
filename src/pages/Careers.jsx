@@ -59,7 +59,7 @@ const OPEN_ROLES = [
 const PERKS = [
   { title: "Cross-Domain Learning", desc: "Gain hands-on exposure across HR tech, taxation, corporate law, statutory compliance, and experiential travel." },
   { title: "Merit-Driven Growth", desc: "Small, agile teams where ownership is recognized immediately with real responsibility and career progression." },
-  { title: "Team Retreats & Workations", desc: "We practice what we offer — periodic offsites, collaborative workations, and flexible work culture." },
+  { title: "Team Retreats & Workations", desc: "We practice what we offer - periodic offsites, collaborative workations, and flexible work culture." },
   { title: "Healthy Work Environment", desc: "Clear ownership, transparent communication, and respect for personal time without unnecessary bureaucracy." },
 ];
 

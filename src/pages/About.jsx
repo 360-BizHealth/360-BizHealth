@@ -17,7 +17,7 @@ const SOLVE = [
 
 const ROLES = [
   ["360 Biz Health", "Requirement assessment, recommendation, coordination, implementation management, payroll outsourcing and ongoing support."],
-  ["HRMS technology partners", "The software itself — built, hosted, maintained and supported by the HRMS provider you select. We work with several as a channel partner."],
+  ["HRMS technology partners", "The software itself - built, hosted, maintained and supported by the HRMS provider you select. We work with several as a channel partner."],
   ["Allied service partners", "Specialists who execute statutory, registration, IPR, certification and travel work where a qualified or licensed provider is required."],
 ];
 
@@ -107,7 +107,7 @@ export default function About() {
         <Reveal className="wrap">
           <Eyebrow>Who we serve</Eyebrow>
           <h2>Startups, SMEs, MSMEs, growing multi-location companies and enterprises</h2>
-          <p className="lede">We work with founders, HR heads, finance and admin teams and operations leaders &mdash; usually at the point where a process that worked at 20 people stops working at 80.</p>
+          <p className="lede">We work with founders, HR heads, finance and admin teams and operations leaders - usually at the point where a process that worked at 20 people stops working at 80.</p>
         </Reveal>
       </Section>
 

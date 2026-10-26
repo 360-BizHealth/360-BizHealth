@@ -9,7 +9,7 @@ export default function Resources() {
   return (
     <>
       <PageHead crumbs={[["Resources"]]} title="Resources"
-        lede="Short, practical notes from work we do every month — written for the person who has to make the decision." />
+        lede="Short, practical notes from work we do every month - written for the person who has to make the decision." />
       <Section tight>
         <Reveal className="wrap wrap--narrow">
           <FaqList items={RESOURCES} idPrefix="note" />

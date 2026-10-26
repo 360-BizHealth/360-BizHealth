@@ -209,7 +209,7 @@ export default function LeadDetail() {
               {lead.activity.map((a) => (
                 <li key={a.id}>
                   <strong>{ACTIONS[a.action] || a.action.replace(/_/g, " ")}</strong>
-                  {describe(a) && <span className="small"> — {describe(a)}</span>}
+                  {describe(a) && <span className="small"> - {describe(a)}</span>}
                   <span className="muted small d-block">{a.actor_email || "System"} · {fmt(a.created_at)}</span>
                 </li>
               ))}

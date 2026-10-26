@@ -41,7 +41,7 @@ const WHY = [
   ["Scales with business size", "From a first formal HR system to multi-location, multi-state operations."],
 ];
 
-const HRMS_FLOW = ["Business requirement", "Assessment", "Suitable HRMS options", "Selection", "Implementation", "Onboarding", "Support"];
+const HRMS_FLOW = ["Business requirement", "Assessment", "Suitable HRMS options", "HRMS Demonstration", "Selection", "Onboarding", "Policy Implementation", "Admin & Product Training","Support"];
 
 const PAYROLL_FLOW = [
   ["Data", "Attendance, joiners, exits, revisions and reimbursements collected to a cut-off"],
@@ -94,7 +94,7 @@ export default function Home() {
           <div>
             <p className="eyebrow">Business solutions. Simplified.</p>
             <h1>One partner for your business&rsquo;s essential operations</h1>
-            <p>HR technology, payroll, compliance, business setup and corporate experiences &mdash; coordinated through one trusted business solutions partner.</p>
+            <p>HR technology, payroll, compliance, business setup and corporate experiences - coordinated through one trusted business solutions partner.</p>
             <div className="hero__cta">
               <Button variant="primary" to="/contact" ev="hero_cta">Talk to a 360 Biz Health expert</Button>
               <Button variant="ghost" href="#services">Explore our services</Button>
@@ -137,13 +137,13 @@ export default function Home() {
 
       <Section>
         <div className="wrap">
-          <Reveal className="panel">
+          <Reveal className="panel panel--white">
+            <Eyebrow>HRMS software solutions</Eyebrow>
             <div className="split split--wide">
               <div>
-                <Eyebrow onDark>HRMS software solutions</Eyebrow>
                 <h2>We don&rsquo;t build an HRMS. We help businesses find and implement the right one.</h2>
-                <p>360 Biz Health works with multiple HRMS software companies as a channel partner. We assess your requirement, compare suitable partner platforms and then coordinate the part that decides whether the investment works &mdash; configuration, migration, training and rollout.</p>
-                <p style={{ color: "rgba(249,244,234,.74)", fontSize: ".95rem" }}>Modules such as core HR, attendance, leave, payroll, self-service, recruitment, expenses and performance are available across the ecosystem, but not every partner platform provides every module. We confirm what is included before you commit.</p>
+                <p>360 Biz Health works with multiple HRMS software companies as a channel partner. We assess your requirement, compare suitable partner platforms and then coordinate the part that decides whether the investment works - configuration, migration, training and rollout.</p>
+                <p>Modules such as core HR, attendance, leave, payroll, self-service, recruitment, expenses and performance are available across the ecosystem, but not every partner platform provides every module. We confirm what is included before you commit.</p>
                 <Button variant="primary" to="/hrms-software-solutions" ev="hrms_section_cta">See how HRMS selection works</Button>
               </div>
               <div>
@@ -190,7 +190,7 @@ export default function Home() {
               <div>
                 <Eyebrow onDark>Corporate retreats &amp; workations</Eyebrow>
                 <h2>Time away that has an agenda and someone holding the plan</h2>
-                <p>Retreats, workations, annual meets, strategy meets, seminars and team experiences &mdash; planned around the objective, with destination, travel, stay and on-ground coordination handled as one plan. Delivered with specialist travel and hospitality partners.</p>
+                <p>Retreats, workations, annual meets, strategy meets, seminars and team experiences - planned around the objective, with destination, travel, stay and on-ground coordination handled as one plan. Delivered with specialist travel and hospitality partners.</p>
                 <Button variant="primary" to="/corporate-retreats-workations" ev="retreat_section_cta">Plan a corporate retreat</Button>
               </div>
               <div>
@@ -232,7 +232,7 @@ export default function Home() {
 
       <CtaBand
         title="Tell us what your business needs. We'll help you map the right next step."
-        text="One message, one call, and a clear recommendation on what to do first — whether that is an HRMS shortlist, a payroll handover, a registration sequence or a retreat plan."
+        text="One message, one call, and a clear recommendation on what to do first - whether that is an HRMS shortlist, a payroll handover, a registration sequence or a retreat plan."
         waMsg="Hi 360 Biz Health, I'd like to discuss a business requirement."
       />
     </>

@@ -7,7 +7,7 @@ export default function Privacy() {
       <h2>What we collect</h2>
       <p>When you submit an enquiry we collect the details you enter: your name, company name, work email, phone number, city, company size, the service you are interested in, your current HRMS if you choose to tell us, and your message. We also record the page you enquired from, the page you first landed on, the referring website, any campaign parameters in the link you arrived through, the date and time you gave consent, and your browser's user-agent string.</p>
       <p>To protect the form from abuse we derive a one-way, salted hash of your IP address. The IP address itself is not stored.</p>
-      <p>If you become a client, we collect the information needed to deliver the service &mdash; which, for payroll and compliance work, includes employee data supplied by you as the employer.</p>
+      <p>If you become a client, we collect the information needed to deliver the service - which, for payroll and compliance work, includes employee data supplied by you as the employer.</p>
       <h2>Why we collect it</h2>
       <p>Enquiry details are used to respond to your enquiry, understand the requirement and send you the information you asked for. Client data is used only to deliver the agreed services. We do not sell your information and we do not share it for third-party marketing.</p>
       <h2>Who we share it with</h2>
@@ -19,7 +19,7 @@ export default function Privacy() {
       <h2>Your choices</h2>
       <p>You can ask us what information we hold about you, ask for corrections, or ask us to delete your enquiry record, by writing to {BIZ.email}. You can opt out of any communication at any time.</p>
       <h2>Cookies and analytics</h2>
-      <p>We use analytics to understand how the website is used &mdash; for example, which pages lead to enquiries. Analytics and marketing tags load in line with the consent choices available to you in your region.</p>
+      <p>We use analytics to understand how the website is used - for example, which pages lead to enquiries. Analytics and marketing tags load in line with the consent choices available to you in your region.</p>
       <h2>Contact</h2>
       <p>Questions about this policy can be sent to {BIZ.email}.</p>
     </LegalPage>

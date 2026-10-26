@@ -26,7 +26,7 @@ export const RESOURCES = [
     "title": "Trademark: search first, class second, filing third",
     "body": [
       "The most expensive trademark mistake is emotional attachment to a name nobody checked. A search tells you whether identical or similar marks already exist in the classes relevant to your goods or services, before you print signage or build a brand around it.",
-      "Class selection matters as much as the mark. Protection is granted for specified classes, so a mark registered for one category does not automatically cover another line of business. Decide too whether you are protecting the word, the logo, or both — they are different filings with different consequences."
+      "Class selection matters as much as the mark. Protection is granted for specified classes, so a mark registered for one category does not automatically cover another line of business. Decide too whether you are protecting the word, the logo, or both - they are different filings with different consequences."
     ]
   },
   {

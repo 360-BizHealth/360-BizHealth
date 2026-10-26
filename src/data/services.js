@@ -5,12 +5,12 @@ export const SERVICES = {
   "hrms-software-solutions": {
     "nav": "HRMS solutions",
     "title": "HRMS Software Solutions for SMEs, MSMEs & Enterprises | 360 Biz Health",
-    "desc": "360 Biz Health works with multiple HRMS software companies as a channel partner — helping businesses assess requirements, compare platforms, and run implementation, migration and onboarding.",
+    "desc": "360 Biz Health works with multiple HRMS software companies as a channel partner - helping businesses assess requirements, compare platforms, and run implementation, migration and onboarding.",
     "h1": "HRMS software solutions for growing businesses",
     "kicker": "We don't build an HRMS. We help you choose one that fits, and then make it work inside your company.",
     "intro": [
       "Most HRMS decisions go wrong in the same two places: the platform is picked from a demo rather than a requirement list, and nobody owns the twelve weeks after the invoice is raised. 360 Biz Health works on both ends. We map what your HR, payroll and attendance processes actually need, put suitable platforms from our partner ecosystem side by side, and then stay involved through configuration, data migration, training and rollout.",
-      "We work with multiple HRMS software companies as a channel partner. That means we can compare platforms against your requirement instead of fitting your requirement to a single product — and we will tell you plainly which capabilities a given platform does and does not cover."
+      "We work with multiple HRMS software companies as a channel partner. That means we can compare platforms against your requirement instead of fitting your requirement to a single product - and we will tell you plainly which capabilities a given platform does and does not cover."
     ],
     "problemTitle": "Where HRMS projects usually stall",
     "problems": [
@@ -122,7 +122,7 @@ export const SERVICES = {
       ],
       [
         "How do you choose which platforms to shortlist?",
-        "From the requirement assessment — headcount, locations, shift and leave policy complexity, payroll inputs, approvals and reporting. Platforms that cannot meet a must-have requirement are ruled out and we say why."
+        "From the requirement assessment - headcount, locations, shift and leave policy complexity, payroll inputs, approvals and reporting. Platforms that cannot meet a must-have requirement are ruled out and we say why."
       ],
       [
         "How long does implementation take?",
@@ -167,12 +167,12 @@ export const SERVICES = {
   "payroll-tds-labour-compliance": {
     "nav": "Payroll & compliance",
     "title": "Payroll Outsourcing, TDS & Statutory Compliance | 360 Biz Health",
-    "desc": "Payroll processing, CTC structuring, TDS and Form 24Q/16 support, PF, ESIC, PT, LWF and labour-law compliance support for Indian businesses — delivered with allied specialists.",
+    "desc": "Payroll processing, CTC structuring, TDS and Form 24Q/16 support, PF, ESIC, PT, LWF and labour-law compliance support for Indian businesses - delivered with allied specialists.",
     "h1": "Payroll, TDS and labour compliance",
     "kicker": "Salary paid on time, statutory inputs filed on schedule, and a record you can produce during an audit.",
     "intro": [
       "Payroll is the one process where a small error becomes an employee grievance, a notice, or both. The work is repetitive, deadline-bound and unforgiving: inputs close, TDS has to be computed on declarations that keep changing, challans and returns have their own calendar, and exits need settlement within the statutory window.",
-      "360 Biz Health runs payroll as a managed service and supports the statutory work around it — directly and, where statutory execution calls for it, through allied specialists. You keep control of approvals and payments. We handle the processing, the computation and the filing calendar."
+      "360 Biz Health runs payroll as a managed service and supports the statutory work around it - directly and, where statutory execution calls for it, through allied specialists. You keep control of approvals and payments. We handle the processing, the computation and the filing calendar."
     ],
     "problemTitle": "What this usually looks like before we start",
     "problems": [
@@ -335,7 +335,7 @@ export const SERVICES = {
     "title": "Business Registration, GST, MSME, Trademark & ISO | 360 Biz Health",
     "desc": "Company and business registration, GST registration and filing, MSME/Udyam registration, trademark search and filing support, and ISO certification support for Indian businesses.",
     "h1": "Business registration, IPR and certifications",
-    "kicker": "The paperwork that has to exist before anything else can — set up in the right order, with the right entity choice.",
+    "kicker": "The paperwork that has to exist before anything else can - set up in the right order, with the right entity choice.",
     "intro": [
       "Setting up is rarely one task. The entity has to be registered, GST has to follow the turnover and state position, Udyam gives access to MSME benefits, the brand name needs protection in the right class, and some buyers will not open a purchase order without a certification on file.",
       "360 Biz Health coordinates this end to end, working with allied professionals where a registration or a filing must be executed by a qualified specialist. You get one point of contact and a sequence that does not double back on itself."
@@ -353,7 +353,7 @@ export const SERVICES = {
     "provide": [
       [
         "Company and business registration",
-        "Entity selection guidance and registration coordination — private limited, LLP, partnership or proprietorship."
+        "Entity selection guidance and registration coordination - private limited, LLP, partnership or proprietorship."
       ],
       [
         "GST registration and filing",
@@ -466,7 +466,7 @@ export const SERVICES = {
       ],
       [
         "Which ISO standard do we need?",
-        "It follows the requirement — often a buyer, tender or sector expectation. We help select the standard, support the documentation and coordinate with the certification body."
+        "It follows the requirement - often a buyer, tender or sector expectation. We help select the standard, support the documentation and coordinate with the certification body."
       ]
     ],
     "related": [
@@ -491,12 +491,12 @@ export const SERVICES = {
   "corporate-retreats-workations": {
     "nav": "Corporate retreats",
     "title": "Corporate Retreats, Workations & Team Experiences | 360 Biz Health",
-    "desc": "Planned corporate retreats, workations, annual meets, strategy meets, seminars and team experiences — destination planning, travel, accommodation and on-ground coordination.",
+    "desc": "Planned corporate retreats, workations, annual meets, strategy meets, seminars and team experiences - destination planning, travel, accommodation and on-ground coordination.",
     "h1": "Corporate retreats and workations",
     "kicker": "Time away that has an agenda, a plan and someone on the ground holding it together.",
     "intro": [
       "A retreat fails quietly. The destination is decided late, the agenda is written on the flight, connectivity turns out to be unreliable for the one session that needed it, and the team returns having spent a budget on a holiday nobody asked for.",
-      "We plan corporate travel around what the time away is meant to achieve — a strategy reset, an annual meet, a distributed team meeting in person for the first time, or a fortnight of work from somewhere better. Destination, travel, stay, agenda logistics and on-ground coordination are handled as one plan."
+      "We plan corporate travel around what the time away is meant to achieve - a strategy reset, an annual meet, a distributed team meeting in person for the first time, or a fortnight of work from somewhere better. Destination, travel, stay, agenda logistics and on-ground coordination are handled as one plan."
     ],
     "problemTitle": "What we plan around",
     "problems": [
@@ -572,7 +572,7 @@ export const SERVICES = {
     "forWho": [
       [
         "Distributed teams",
-        "The one time in the year everyone is in the same room — worth planning properly."
+        "The one time in the year everyone is in the same room - worth planning properly."
       ],
       [
         "Leadership groups",
