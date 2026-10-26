@@ -12,6 +12,7 @@
   --orange:#F26423;      /* decorative accent: dots, rules, the ring mark */
 
   /* accessible derivatives */
+  --orange-hover:#D95316;
   --orange-ink:#B9440F;  /* filled CTA with white text 5.4:1; text on cream 4.9:1 */
   --orange-ink-2:#A33C0C;
   --sage-ink:#4F6B57;    /* sage tone for small text on cream 5.4:1 */
@@ -133,8 +134,8 @@ hr{border:0;border-top:1px solid var(--line-2);margin:0}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font:600 .95rem/1.2 var(--sans);text-decoration:none;padding:.8rem 1.2rem;min-height:46px;border-radius:10px;border:1.5px solid transparent;cursor:pointer;transition:transform .18s ease,background .18s ease,border-color .18s ease,color .18s ease;text-align:center}
 .btn:hover{transform:translateY(-1px)}
 .btn:disabled,.btn[aria-disabled="true"]{opacity:.65;cursor:not-allowed;transform:none}
-.btn--primary{background:var(--orange-ink);color:#fff}
-.btn--primary:hover{background:var(--orange-ink-2)}
+.btn--primary{background:var(--orange);color:#fff}
+.btn--primary:hover{background:var(--orange-hover)}
 .btn--green{background:var(--forest);color:#fff}
 .btn--green:hover{background:var(--deep)}
 .btn--ghost{border-color:var(--forest);background:transparent;color:var(--deep)}
