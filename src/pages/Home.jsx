@@ -185,17 +185,17 @@ export default function Home() {
 
       <Section>
         <div className="wrap">
-          <Reveal className="panel panel--deep panel--ring">
+          <Reveal className="panel panel--white">
+            <Eyebrow>Corporate retreats &amp; workations</Eyebrow>
             <div className="split">
               <div>
-                <Eyebrow onDark>Corporate retreats &amp; workations</Eyebrow>
                 <h2>Time away that has an agenda and someone holding the plan</h2>
                 <p>Retreats, workations, annual meets, strategy meets, seminars and team experiences - planned around the objective, with destination, travel, stay and on-ground coordination handled as one plan. Delivered with specialist travel and hospitality partners.</p>
                 <Button variant="primary" to="/corporate-retreats-workations" ev="retreat_section_cta">Plan a corporate retreat</Button>
               </div>
               <div>
                 <Flow items={["Retreats", "Workations", "Annual meets", "Seminars", "Team experiences"]} tone="orange" label="Retreat formats" />
-                <p style={{ color: "rgba(249,244,234,.74)", fontSize: ".92rem", marginTop: "1rem" }}>Destinations are shortlisted against objective, season, group size and budget. Leh-Ladakh is one example, not a fixed option.</p>
+                
               </div>
             </div>
           </Reveal>

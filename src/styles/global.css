@@ -242,6 +242,7 @@ hr{border:0;border-top:1px solid var(--line-2);margin:0}
 .panel--white .flow li span{color:var(--muted)}
 .panel--ring::after{content:"";position:absolute;right:-140px;top:-140px;width:360px;height:360px;border-radius:50%;border:44px solid rgba(113,144,120,.38);pointer-events:none}
 .panel--ring::before{content:"";position:absolute;right:120px;top:40px;width:34px;height:34px;border-radius:50%;background:var(--orange);pointer-events:none;z-index:1}
+.panel--no-dot::before{display:none}
 .panel > *{position:relative;z-index:2}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,3.4vw,52px);align-items:start}
 .split--wide{grid-template-columns:.9fr 1.1fr}
