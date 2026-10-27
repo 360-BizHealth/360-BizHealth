@@ -34,12 +34,8 @@
   ],
   "rewrites": [
     {
-      "source": "/blog",
-      "destination": "/api/v1/blog-page"
-    },
-    {
       "source": "/blog/:slug",
-      "destination": "/api/v1/blog-page?slug=:slug"
+      "destination": "/index.html"
     },
     {
       "source": "/sitemap.xml",
@@ -102,10 +98,5 @@
         }
       ]
     }
-  ],
-  "functions": {
-    "api/v1/blog-page.js": {
-      "includeFiles": "dist-ssr/**"
-    }
-  }
+  ]
 }

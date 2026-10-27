@@ -30,8 +30,8 @@ describe("routes", () => {
     }
   });
 
-  it("serves the blog dynamically: /blog is not prerendered and no article routes are static", () => {
-    expect(ROUTES.find((r) => r.path === "/blog").meta.dynamic).toBe(true);
+  it("prerenders /blog statically and no article routes are static", () => {
+    expect(ROUTES.find((r) => r.path === "/blog").meta.dynamic).toBe(false);
     expect(ROUTES.filter((r) => r.path.startsWith("/blog/"))).toEqual([]);
   });
 
