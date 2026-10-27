@@ -1,0 +1,9 @@
+allowBuilds:
+  esbuild: true
+  "@embedded-postgres/linux-x64": true
+  "@embedded-postgres/windows-x64": true
+
+onlyBuiltDependencies:
+  - esbuild
+  - "@embedded-postgres/linux-x64"
+  - "@embedded-postgres/windows-x64"

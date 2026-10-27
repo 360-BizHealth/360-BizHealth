@@ -1,7 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "npm ci",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "cleanUrls": true,
@@ -105,8 +104,7 @@
     }
   ],
   "functions": {
-    "api/**/*.js": {
-      "maxDuration": 15,
+    "api/v1/blog-page.js": {
       "includeFiles": "dist-ssr/**"
     }
   },
