@@ -47,7 +47,7 @@
     },
     {
       "source": "/admin/:path*",
-      "destination": "/admin"
+      "destination": "/admin.html"
     }
   ],
   "headers": [
@@ -107,11 +107,5 @@
     "api/v1/blog-page.js": {
       "includeFiles": "dist-ssr/**"
     }
-  },
-  "crons": [
-    {
-      "path": "/api/v1/cron/retry-notifications",
-      "schedule": "0 4 * * *"
-    }
-  ]
+  }
 }
