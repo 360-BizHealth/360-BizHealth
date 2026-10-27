@@ -10,4 +10,5 @@ dist-ssr
 test-results
 playwright-report
 .vercel
+pnpm-lock.yaml
 !.env.example

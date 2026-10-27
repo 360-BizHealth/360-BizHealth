@@ -36,13 +36,5 @@
   },
   "engines": {
     "node": "22.x"
-  },
-  "packageManager": "pnpm@10.14.0",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@embedded-postgres/linux-x64",
-      "@embedded-postgres/windows-x64",
-      "esbuild"
-    ]
   }
 }
