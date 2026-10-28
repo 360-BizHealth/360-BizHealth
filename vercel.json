@@ -35,16 +35,20 @@
   ],
   "rewrites": [
     {
+      "source": "/api/:path*",
+      "destination": "/api/index.js?_vercel_path=:path*"
+    },
+    {
       "source": "/blog",
-      "destination": "/api/v1/blog-page"
+      "destination": "/api/index.js?_vercel_path=v1/blog-page"
     },
     {
       "source": "/blog/:slug",
-      "destination": "/api/v1/blog-page?slug=:slug"
+      "destination": "/api/index.js?_vercel_path=v1/blog-page&slug=:slug"
     },
     {
       "source": "/sitemap.xml",
-      "destination": "/api/v1/sitemap"
+      "destination": "/api/index.js?_vercel_path=v1/sitemap"
     },
     {
       "source": "/admin/:path*",
@@ -105,7 +109,7 @@
     }
   ],
   "functions": {
-    "api/**/*.js": {
+    "api/index.js": {
       "maxDuration": 15,
       "includeFiles": "dist-ssr/**"
     }
