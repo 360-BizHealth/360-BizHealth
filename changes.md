@@ -1,97 +1,79 @@
-# 360 Biz Health - New Features & Updates (Business & Sales Guide)
+# 360 Biz Health - New Features & Updates (Sales & Marketing Guide)
 
-> **Note for Sales & Marketing Team**: Yeh document explain karta hai ki website aur admin panel me kya naye features aur improvements aaye hain, bina kisi technical language ke.
-
----
-
-## 📱 WhatsApp Ready Message (Direct Copy-Paste)
-
-*Copy below this line and share in WhatsApp:*
+> **Overview**: This document summarizes the latest customer-facing website enhancements and internal CRM capabilities designed to empower our Sales and Marketing operations.
 
 ---
 
-🚀 *360 Biz Health - Website & CRM New Updates Live!* 🚀
+## 📱 WhatsApp Announcement (Ready to Share)
 
-Team, humari website aur internal CRM panel me kaafi naye aur powerful features live ho gaye hain jo Sales, Marketing aur Lead follow-up ko bohot aasan banayenge:
-
----
-
-🏝️ *1. Naya Corporate Retreats & Workations Section*
-• *6 Dedicated Packages*: Alpine Lake, Coastal Cove, Desert Oasis, Snow Valley, Forest Canopy aur High Plateau.
-• *Explore Package Popup*: Client ab har package par click karke uski highlights aur suitability detail me dekh sakta hai.
-• *Instant Form Pre-Fill*: Client jab kisi package par "Enquire Now" dabayega, to page scroll hokar wahi package automatically select ho jayega.
-• *Detailed Lead Capture*: Form me team size, travel dates, preferred destination aur budget requirements sab kuch pehle hi capture ho jayega.
+*Copy below this line:*
 
 ---
 
-💼 *2. Sales Team Ke Liye Naya CRM Dashboard (/admin)*
-• *Executive KPI Cards*: Login karte hi dikhega ki Total Leads kitni hain, New kitni hain, aur In-Progress kitni hain.
-• *Live New Enquiries Alert*: Sidebar me red badge dikhega jab bhi koi nayi enquiry aayegi, taaki turant call ho sake.
-• *Team Private Notes*: Ab har lead ke andar sales team apne internal private notes (jaise: "Called customer, meeting set for Friday") likh sakti hai.
-• *1-Click Excel/CSV Export*: Saare leads aur unki complete details (UTM marketing source ke sath) ek click me download kar sakte hain.
-• *Status Tracking*: Leads ko aasani se mark karein: New ➔ Contacted ➔ Qualified ➔ Proposal Sent ➔ Won / Lost.
+🚀 *360 Biz Health - Major Website & CRM Upgrades Live!* 🚀
+
+Team, we have rolled out significant updates across our public website and internal CRM dashboard to streamline lead capture, improve lead qualification, and accelerate sales follow-ups. 
+
+Here is a quick overview of what is new and how it helps our Sales & Marketing teams:
 
 ---
 
-✍️ *3. Marketing & Content Hub (Blog System)*
-• *Direct Publishing*: Naye blogs aur guides publish karne ke liye developer ki zaroorat nahi hai.
-• *Live Draft & Preview*: Article publish karne se pehle kaisa dikhega, uska live preview dekhein.
-• *LinkedIn Share*: Readers ke liye 1-click LinkedIn share button.
+🏝️ *1. Dedicated Corporate Retreats & Workations Experience*
+• *6 Curated Packages*: Live offerings for Alpine Lake, Coastal Cove, Desert Oasis, Snow Valley, Forest Canopy, and High Plateau.
+• *Interactive Package Preview*: Prospects can click "Explore Package" on any card to view detailed itineraries, key highlights, and team suitability in a clean modal.
+• *Seamless Package Pre-Fill*: When a prospect clicks "Enquire Now" on any package, the page automatically scrolls down and pre-selects that package in the enquiry form.
+• *Richer Lead Data*: Forms now capture group size (e.g. 10–25, 25–50, 50+), travel dates, preferred environment (Hills, Beach, Desert), and custom requirements, giving Sales complete context before the discovery call.
 
 ---
 
-👥 *4. Team & User Access Control*
-• Ab nayi sales/marketing team members ke liye alag se login account banaya ja sakta hai (Admin ya Staff role).
-• Password reset aur account access manage karna ab bohot aasan hai.
+💼 *2. Brand New Sales CRM Dashboard (`/admin`)*
+• *Executive KPI Cards*: Real-time overview of Total Leads, New Uncontacted Enquiries, and Deals in Progress right upon sign-in.
+• *Live Badge Counter*: A real-time badge in the sidebar alerts you whenever new, unaddressed enquiries arrive for faster turnaround times.
+• *Internal Team Notes*: Log private call notes, meeting takeaways, and next follow-up dates directly under each lead.
+• *1-Click CSV/Excel Export*: Download all lead data with complete attribution and marketing campaign tags for reporting and offline analysis.
+• *Pipeline Tracking*: Easily move leads through standard stages: *New ➔ Contacted ➔ Qualified ➔ Proposal Sent ➔ Won / Lost*.
 
 ---
 
-*Check it out live:*
-👉 Website: https://www.360bizhealth.com/corporate-retreats-workations
-👉 Admin CRM: https://www.360bizhealth.com/admin
+✍️ *3. Marketing Content Hub & Blog CMS*
+• *Direct Publishing*: Marketing can now draft, edit, and publish blogs and practical guides directly from the dashboard without needing developer assistance.
+• *Live Article Preview*: Check full typography and layout before making articles live.
+• *Social Share*: Built-in one-click LinkedIn sharing button on all live articles.
+• *Campaign Tracking*: All form submissions automatically log UTM tags (source, medium, campaign) so Marketing can evaluate channel ROI.
 
 ---
 
-## 📌 Detailed Breakdown (In Simple Language)
-
-### 1. Website Par Customer Ko Kya Naya Dikhega?
-1. **Corporate Retreats Ka Naya Landing Page**:
-   - Pehle generic page tha, ab visually stunning page hai jisme authentic offsite photography hai.
-   - Client ko 6 ready-made packages dikhte hain.
-   - "Explore Package" button se ek clean card khulta hai jisme clear points me bataya gaya hai ki ye package kis type ki team ke liye best hai.
-2. **Fast & Smart Enquiry Form**:
-   - Customer ko lamba form bharne me alas nahi aayega. Quick drop-downs hain (Group size: 10-25, 25-50 etc., Duration, Type of retreat).
-   - Package pasand aane par form me wo package automatically selected rehta hai.
-3. **Interactive Blog & Guides**:
-   - Marketing team ke published articles ab category filter aur search bar ke sath aate hain.
-   - Reader article me table of contents se direct specific heading par jump kar sakta hai.
+👥 *4. Team Access & Account Management*
+• Multi-user access with dedicated Admin and Staff roles for team members.
+• Secure individual logins and self-serve password management.
 
 ---
 
-### 2. Sales Team Ko CRM Me Kya Naya Milega?
-1. **Saare Leads Ek Clean Table Me**:
-   - Date, Name, Company, Email, Phone aur Service vertical sab ek jagah.
-   - Filter kar sakte hain sirf "New" enquiries, ya sirf "Corporate Retreats", ya kisi specific date range ke leads.
-2. **Client Ki Complete Details Ek Click Par**:
-   - Client ne website par kahan se click kiya (Google Ad, Campaign ya Direct).
-   - Retreat lead hai to: Kitne log ja rahe hain, kahan jana chahte hain, kitne din ka plan hai.
-3. **Internal Follow-up Notes**:
-   - Sales reps har call ke baad lead ke andar notes daal sakte hain taaki doosra team member bhi jaan sake ki baat kahan tak pahunchi.
-4. **Instant Email Notification Retry**:
-   - Agar kisi lead ka email alert miss ho gaya ho, to CRM ke andar se dubara notification bhej sakte hain.
+*Explore Live:*
+👉 *Retreats Section*: https://www.360bizhealth.com/corporate-retreats-workations
+👉 *CRM Dashboard*: https://www.360bizhealth.com/admin
 
 ---
 
-### 3. Marketing Team Ko Kya Faayda Hoga?
-1. **Lead Source & Attribution**:
-   - Har lead ke sath UTM data save hota hai (e.g., Google Search, Meta Ads, Campaign Name). Marketing team dekh sakti hai ki kaunse ad se real leads aa rahi hain.
-2. **Blog CMS**:
-   - Marketing team direct dashboard se articles likh kar, image laga kar publish kar sakti hai.
-   - SEO tags aur description khud set kar sakte hain taaki Google ranking boost ho.
+## 📌 Detailed Functional Breakdown
 
----
+### 1. Customer-Facing Website Enhancements
+- **High-Converting Landing Page (`/corporate-retreats-workations`)**:
+  - Transformed from a generic text page into an immersive, visually engaging landing experience with authentic photography.
+  - Features clear audience messaging, planning roadmaps, and targeted corporate FAQs.
+- **Smart Lead Capture Form**:
+  - Replaces lengthy questionnaires with structured, intuitive drop-downs.
+  - Synchronized package selection ensures zero friction between browsing and inquiring.
+- **Dynamic Content & Knowledge Hub (`/blog`)**:
+  - Live category filters and real-time search allow prospects to discover relevant HR, compliance, and payroll guides.
+  - Interactive Table of Contents with jump links on article pages.
 
-### 4. Management & Admin Ke Liye:
-- **Full Security**: Staff members ko sirf required access milta hai.
-- **Data Backup**: Sabhi leads CRM me safely store rehti hain aur CSV me exportable hain.
-- **Fast & Reliable**: Website aur admin panel dono mobile aur desktop par instantly load hote hain.
+### 2. CRM & Pipeline Management for Sales
+- **Centralized Pipeline**: All website and retreat enquiries flow into a single unified queue with status indicators.
+- **Lead Context at a Glance**: Each lead record details the exact submission page, full enquiry message, structured retreat parameters, and marketing referral source.
+- **Team Collaboration**: Private internal notes keep account executives and sales reps aligned on follow-up context.
+- **Email Notification Reliability**: Re-trigger lead alert emails directly from the lead detail screen if needed.
+
+### 3. Marketing Attribution & Publishing
+- **Granular Lead Attribution**: Every incoming lead captures referrer data, landing page, and UTM tags (Google Ads, LinkedIn, Meta, email campaigns), providing full transparency on lead generation channels.
+- **Self-Serve Publishing**: Marketing can write in Markdown, manage featured images, customize SEO meta descriptions, and publish instantly.
