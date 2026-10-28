@@ -92,7 +92,7 @@ export const ROUTES = [
   {
     path: "/blog",
     element: <BlogIndex />,
-    meta: { ...BLOG_INDEX_META, dynamic: false },
+    meta: { ...BLOG_INDEX_META, dynamic: true },
   },
   {
     path: "/careers",
